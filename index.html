@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山西伸典 | AI×魚×教育×地域 — 下関から世界へ</title>
+<meta name="description" content="山口県下関市のふぐ老舗問屋3代目社長・AI教育者・地域コーディネーター 山西伸典のオフィシャルページ。スポンサー募集・事業紹介・お問い合わせはこちら。">
+<meta property="og:title" content="山西伸典 | AI×魚×教育×地域">
+<meta property="og:description" content="下関から世界へ。伝統を守り、未来を創る。ふぐ老舗問屋3代目×AI教育者×地域コーディネーター。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,700;1,700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root {
+  --primary: #E8750A;
+  --primary-deep: #B85800;
+  --primary-light: #F5A845;
+  --primary-pale: #FFF8F0;
+  --accent: #5D3E1A;
+  --brown: #7A4F2A;
+  --gold: #D4A017;
+  --gold-light: #F0D580;
+  --cream: #FAF5ED;
+  --white: #FFFFFF;
+  --text: #3A2010;
+  --text-light: #6B4C2A;
+  --border: #E8D5B8;
+  --shadow: rgba(93,62,26,0.15);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;cursor:none;}
+@media(max-width:768px){body{cursor:auto;}}
+
+/* ===== CURSOR & TRAIL ===== */
+#custom-cursor{position:fixed;width:36px;height:36px;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);font-size:28px;display:none;transition:transform 0.1s;}
+@media(min-width:769px){#custom-cursor{display:block;}}
+.trail-p{position:fixed;pointer-events:none;z-index:9998;font-size:14px;opacity:1;animation:trailFade 0.7s forwards;}
+@keyframes trailFade{to{opacity:0;transform:translateY(-18px) scale(0.4);}}
+
+/* ===== SCROLL PROGRESS ===== */
+#scroll-progress{position:fixed;top:0;left:0;height:5px;background:linear-gradient(90deg,var(--primary),var(--gold));z-index:1000;transition:width 0.1s;}
+#scroll-ball{position:fixed;top:-7px;width:18px;height:18px;background:var(--gold);border-radius:50%;z-index:1001;transform:translateX(-50%);box-shadow:0 0 10px var(--gold);font-size:11px;display:flex;align-items:center;justify-content:center;color:white;}
+
+/* ===== STAY BADGE ===== */
+#stay-badge{position:fixed;bottom:60px;left:16px;background:var(--primary);color:white;padding:8px 16px;border-radius:20px;font-size:12px;z-index:500;opacity:0;transition:opacity 0.5s;box-shadow:0 4px 16px var(--shadow);}
+
+/* ===== CHEER BAR ===== */
+#cheer-bar{position:fixed;bottom:0;left:0;right:0;height:7px;background:rgba(0,0,0,0.1);z-index:400;}
+#cheer-fill{height:100%;background:linear-gradient(90deg,var(--primary-light),var(--gold));transition:width 0.4s;}
+#cheer-level-badge{position:fixed;bottom:12px;right:16px;background:var(--accent);color:white;padding:4px 12px;border-radius:12px;font-size:11px;z-index:401;}
+
+/* ===== FLOATING MSG ===== */
+.floating-msg{position:fixed;top:80px;right:16px;background:white;border-left:4px solid var(--primary);padding:12px 16px;border-radius:8px;font-size:13px;z-index:600;box-shadow:0 4px 20px var(--shadow);animation:slideIn 0.4s ease,slideOut 0.4s ease 2.6s forwards;max-width:220px;}
+@keyframes slideIn{from{transform:translateX(130%);opacity:0;}to{transform:translateX(0);opacity:1;}}
+@keyframes slideOut{to{transform:translateX(130%);opacity:0;}}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;transition:background 0.3s;}
+nav.scrolled{background:rgba(93,62,26,0.96);backdrop-filter:blur(14px);box-shadow:0 2px 24px rgba(0,0,0,0.25);}
+.nav-logo{font-family:'Playfair Display',serif;color:var(--gold-light);font-size:1.25rem;text-decoration:none;}
+.nav-links{display:flex;gap:20px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.85rem;transition:color 0.2s;}
+.nav-links a:hover{color:var(--gold-light);}
+@media(max-width:600px){.nav-links{display:none;}}
+
+/* ===== HERO ===== */
+#hero{min-height:100vh;background:linear-gradient(135deg,var(--accent) 0%,var(--brown) 45%,var(--primary-deep) 100%);position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:90px 20px 70px;}
+.hero-bg-overlay{position:absolute;inset:0;background:radial-gradient(circle at 25% 50%,rgba(232,117,10,0.18) 0%,transparent 55%),radial-gradient(circle at 75% 20%,rgba(212,160,23,0.12) 0%,transparent 45%);}
+.bg-fish{position:absolute;font-size:clamp(3rem,6vw,5rem);opacity:0.06;animation:swimBg linear infinite;}
+@keyframes swimBg{from{transform:translateX(-200px);}to{transform:translateX(calc(100vw + 200px));}}
+.hero-inner{position:relative;z-index:1;}
+.hero-avatar{width:170px;height:170px;border-radius:50%;border:6px solid var(--gold);margin:0 auto 24px;display:flex;align-items:center;justify-content:center;font-size:88px;background:linear-gradient(135deg,#fff5e8,var(--gold-light));box-shadow:0 0 0 5px rgba(212,160,23,0.3),0 10px 40px rgba(0,0,0,0.35);overflow:hidden;}
+.hero-avatar img{width:100%;height:100%;object-fit:cover;}
+.hero-name{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,7vw,4.8rem);color:white;text-shadow:2px 5px 24px rgba(0,0,0,0.45);margin-bottom:4px;}
+.hero-kana{font-size:1rem;color:rgba(255,255,255,0.65);letter-spacing:0.35em;margin-bottom:20px;}
+.hero-typing{font-size:clamp(1rem,3.2vw,1.5rem);color:var(--gold-light);min-height:2.2em;margin-bottom:28px;font-weight:500;}
+.typing-cursor{animation:blink 1s infinite;}
+@keyframes blink{50%{opacity:0;}}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:36px;}
+.badge{background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.3);color:white;padding:7px 16px;border-radius:24px;font-size:0.85rem;backdrop-filter:blur(6px);}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:36px;}
+.btn-primary{background:linear-gradient(135deg,var(--primary),var(--gold));color:white;padding:15px 34px;border-radius:50px;font-size:1rem;font-weight:700;text-decoration:none;border:none;cursor:pointer;box-shadow:0 5px 24px rgba(232,117,10,0.45);transition:transform 0.2s,box-shadow 0.2s;display:inline-block;}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(232,117,10,0.55);}
+.btn-outline{background:rgba(255,255,255,0.14);color:white;padding:15px 34px;border-radius:50px;font-size:1rem;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,0.5);cursor:pointer;backdrop-filter:blur(6px);transition:background 0.2s;display:inline-block;}
+.btn-outline:hover{background:rgba(255,255,255,0.28);}
+.hero-visitor{font-size:0.85rem;color:rgba(255,255,255,0.55);}
+
+/* ===== SECTION BASE ===== */
+section{padding:84px 20px;}
+.section-inner{max-width:1020px;margin:0 auto;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4.5vw,3rem);text-align:center;margin-bottom:10px;color:var(--accent);}
+.section-subtitle{text-align:center;color:var(--text-light);margin-bottom:52px;font-size:0.95rem;}
+.fade-in{opacity:0;transform:translateY(32px);transition:opacity 0.75s ease,transform 0.75s ease;}
+.fade-in.visible{opacity:1;transform:none;}
+
+/* ===== PROFILE ===== */
+#profile{background:white;}
+.profile-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:44px;align-items:start;}
+@media(max-width:640px){.profile-grid{grid-template-columns:1fr;}}
+.profile-photo-wrap{width:100%;aspect-ratio:3/4;background:linear-gradient(135deg,var(--primary-pale),var(--gold-light));border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:clamp(60px,16vw,110px);box-shadow:0 10px 40px var(--shadow);overflow:hidden;}
+.profile-photo-wrap img{width:100%;height:100%;object-fit:cover;border-radius:18px;}
+.profile-table{width:100%;border-collapse:collapse;}
+.profile-table tr{border-bottom:1px solid var(--border);}
+.profile-table td{padding:13px 8px;font-size:0.92rem;line-height:1.6;}
+.profile-table td:first-child{color:var(--primary);font-weight:700;width:108px;white-space:nowrap;}
+.motto-box{margin-top:28px;background:linear-gradient(135deg,var(--primary-pale),var(--gold-light));border-radius:14px;padding:22px;border-left:5px solid var(--primary);}
+.motto-label{font-size:0.78rem;color:var(--primary);font-weight:700;margin-bottom:8px;letter-spacing:0.12em;}
+.motto-text{font-family:'Dancing Script',cursive;font-size:1.5rem;color:var(--accent);}
+
+/* ===== BUSINESS ===== */
+#business{background:var(--cream);}
+.business-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+@media(max-width:600px){.business-grid{grid-template-columns:1fr;}}
+.business-card{background:white;border-radius:18px;padding:30px;box-shadow:0 5px 24px var(--shadow);transition:transform 0.25s,box-shadow 0.25s;border-top:4px solid var(--primary);}
+.business-card:hover{transform:translateY(-5px);box-shadow:0 12px 40px var(--shadow);}
+.business-icon{font-size:2.6rem;margin-bottom:14px;}
+.business-name{font-size:1.15rem;font-weight:700;color:var(--accent);margin-bottom:10px;}
+.business-desc{font-size:0.9rem;color:var(--text-light);line-height:1.75;}
+
+/* ===== GALLERY ===== */
+#gallery{background:var(--primary-pale);}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+@media(max-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+.gallery-item{aspect-ratio:1;border-radius:14px;overflow:hidden;cursor:pointer;position:relative;background:linear-gradient(135deg,var(--cream),var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:44px;box-shadow:0 5px 16px var(--shadow);transition:transform 0.22s;}
+.gallery-item:hover{transform:scale(1.04);}
+.gallery-item img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+.gallery-overlay{position:absolute;inset:0;background:rgba(93,62,26,0.42);opacity:0;transition:opacity 0.22s;display:flex;align-items:center;justify-content:center;color:white;font-size:26px;}
+.gallery-item:hover .gallery-overlay{opacity:1;}
+#lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.87);z-index:2000;align-items:center;justify-content:center;flex-direction:column;gap:16px;}
+#lightbox.open{display:flex;}
+#lightbox img{max-width:90vw;max-height:85vh;border-radius:14px;object-fit:contain;}
+#lightbox-close{position:absolute;top:18px;right:24px;color:white;font-size:38px;cursor:pointer;background:none;border:none;line-height:1;}
+.lb-emoji{font-size:110px;}
+
+/* ===== ACHIEVEMENTS ===== */
+#achievements{background:white;}
+.achieve-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+@media(max-width:640px){.achieve-grid{grid-template-columns:1fr;}}
+.card-3d{perspective:1100px;height:290px;cursor:pointer;}
+.card-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 0.65s;}
+.card-3d.flipped .card-inner{transform:rotateY(180deg);}
+.card-front,.card-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;padding:34px 26px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 8px 36px var(--shadow);}
+.card-front{background:linear-gradient(135deg,var(--accent),var(--brown));color:white;}
+.card-back{background:linear-gradient(135deg,var(--primary),var(--gold));color:white;transform:rotateY(180deg);}
+.card-icon{font-size:3.2rem;margin-bottom:16px;}
+.card-title{font-size:1.1rem;font-weight:700;margin-bottom:10px;}
+.card-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--gold-light);}
+.card-label{font-size:0.85rem;opacity:0.78;}
+.card-back-text{font-size:0.95rem;line-height:1.75;}
+.flip-hint{font-size:0.75rem;opacity:0.55;margin-top:14px;}
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold),var(--primary));color:white;padding:14px 28px;border-radius:50px;font-weight:700;z-index:800;animation:toastAnim 3.5s forwards;white-space:nowrap;box-shadow:0 6px 24px rgba(212,160,23,0.5);}
+@keyframes toastAnim{0%{opacity:0;transform:translateX(-50%) translateY(20px);}12%{opacity:1;transform:translateX(-50%) translateY(0);}80%{opacity:1;}100%{opacity:0;transform:translateX(-50%) translateY(-20px);}}
+
+/* ===== MINI GAME ===== */
+#game-section{background:var(--accent);color:white;text-align:center;}
+#game-section .section-title{color:var(--gold-light);}
+#game-section .section-subtitle{color:rgba(255,255,255,0.68);}
+#game-area{position:relative;width:100%;max-width:620px;height:340px;margin:0 auto 22px;background:rgba(255,255,255,0.06);border:2px solid rgba(255,255,255,0.2);border-radius:22px;overflow:hidden;cursor:crosshair;}
+.fugu-target{position:absolute;font-size:2.8rem;cursor:pointer;user-select:none;animation:swimFish linear;animation-fill-mode:forwards;}
+@keyframes swimFish{from{transform:translateX(-80px);}to{transform:translateX(calc(100vw + 80px));}}
+.fugu-target.rtl{animation-name:swimFishRTL;}
+@keyframes swimFishRTL{from{transform:translateX(calc(100% + 80px)) scaleX(-1);}to{transform:translateX(-80px) scaleX(-1);}}
+#game-score-display{font-size:1.6rem;font-weight:700;color:var(--gold-light);margin-bottom:12px;}
+#game-start-btn{background:linear-gradient(135deg,var(--primary),var(--gold));color:white;border:none;padding:14px 36px;border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 5px 24px rgba(232,117,10,0.42);transition:transform 0.2s;}
+#game-start-btn:hover{transform:translateY(-2px);}
+#game-clear-msg{display:none;margin-top:16px;background:linear-gradient(135deg,var(--primary),var(--gold));padding:20px 32px;border-radius:18px;font-size:1.1rem;font-weight:700;}
+
+/* ===== BENEFITS ===== */
+#benefits{background:var(--cream);}
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+@media(max-width:640px){.benefits-grid{grid-template-columns:1fr;}}
+.benefit-card{background:white;border-radius:18px;padding:34px 26px;text-align:center;box-shadow:0 5px 24px var(--shadow);transition:transform 0.25s;border-bottom:4px solid var(--primary);}
+.benefit-card:hover{transform:translateY(-5px);}
+.benefit-icon{font-size:3.2rem;margin-bottom:18px;}
+.benefit-title{font-size:1.1rem;font-weight:700;color:var(--accent);margin-bottom:13px;}
+.benefit-desc{font-size:0.9rem;color:var(--text-light);line-height:1.78;}
+
+/* ===== PLANS ===== */
+#plans{background:white;}
+.plans-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:end;}
+@media(max-width:900px){.plans-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:500px){.plans-grid{grid-template-columns:1fr;}}
+.plan-card{border-radius:22px;padding:34px 26px;text-align:center;position:relative;box-shadow:0 8px 36px var(--shadow);transition:transform 0.25s;}
+.plan-card:hover{transform:translateY(-5px);}
+.plan-lite{background:var(--cream);border:2px solid var(--border);}
+.plan-std{background:linear-gradient(155deg,var(--primary),var(--primary-deep));color:white;}
+.plan-entry{background:var(--white);border:2px solid var(--border);}
+.plan-pre{background:linear-gradient(155deg,var(--accent),var(--brown));color:white;}
+.plan-badge{display:inline-block;background:var(--gold);color:white;padding:5px 14px;border-radius:22px;font-size:0.76rem;font-weight:700;margin-bottom:18px;}
+.plan-name{font-size:1.2rem;font-weight:700;margin-bottom:10px;}
+.plan-price{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;margin-bottom:5px;}
+.plan-lite .plan-price{color:var(--primary);}
+.plan-period{font-size:0.85rem;opacity:0.75;margin-bottom:22px;}
+.plan-features{list-style:none;text-align:left;margin-bottom:26px;font-size:0.9rem;}
+.plan-features li{padding:7px 0;display:flex;align-items:flex-start;gap:9px;border-bottom:1px solid rgba(255,255,255,0.12);}
+.plan-lite .plan-features li{border-bottom:1px solid var(--border);}
+.plan-features li::before{content:'✓';color:var(--gold-light);font-weight:700;flex-shrink:0;}
+.plan-lite .plan-features li::before{color:var(--primary);}
+.slot-row{font-size:0.82rem;opacity:0.68;margin-bottom:18px;}
+.plan-btn{display:block;background:white;color:var(--primary);padding:13px;border-radius:50px;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-size:0.95rem;transition:transform 0.2s;width:100%;}
+.plan-lite .plan-btn{background:linear-gradient(135deg,var(--primary),var(--gold));color:white;}
+.plan-btn:hover{transform:scale(1.03);}
+
+/* ===== CHEER BOARD ===== */
+#cheer-board{background:linear-gradient(155deg,var(--accent),var(--brown));color:white;}
+#cheer-board .section-title{color:var(--gold-light);}
+#cheer-board .section-subtitle{color:rgba(255,255,255,0.68);}
+.cheer-input-row{display:flex;gap:13px;max-width:620px;margin:0 auto 36px;}
+.cheer-input{flex:1;padding:13px 22px;border-radius:50px;border:2px solid rgba(255,255,255,0.28);background:rgba(255,255,255,0.1);color:white;font-size:1rem;outline:none;font-family:'Noto Sans JP',sans-serif;}
+.cheer-input::placeholder{color:rgba(255,255,255,0.45);}
+.cheer-input:focus{border-color:var(--gold);}
+.cheer-submit{background:linear-gradient(135deg,var(--primary),var(--gold));color:white;border:none;padding:13px 26px;border-radius:50px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'Noto Sans JP',sans-serif;}
+.cheer-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:13px;max-width:820px;margin:0 auto;}
+.cheer-item{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.22);border-radius:14px;padding:18px;font-size:0.9rem;animation:cheerPop 0.4s ease;}
+@keyframes cheerPop{from{transform:scale(0.8);opacity:0;}to{transform:scale(1);opacity:1;}}
+
+/* ===== MESSAGE ===== */
+#message-section{background:linear-gradient(155deg,var(--primary-pale),var(--gold-light));}
+.message-box{max-width:740px;margin:0 auto;text-align:center;}
+.message-quote-icon{font-family:'Playfair Display',serif;font-size:5rem;color:var(--primary);line-height:0;vertical-align:-24px;}
+.message-text{font-size:1.06rem;line-height:2.1;color:var(--text);margin:20px 0;}
+.message-name{font-weight:700;color:var(--accent);font-size:1.15rem;margin-top:20px;}
+
+/* ===== FAQ ===== */
+#faq{background:white;}
+.faq-list{max-width:720px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{width:100%;text-align:left;padding:22px 0;background:none;border:none;font-size:1rem;font-weight:700;color:var(--accent);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:'Noto Sans JP',sans-serif;}
+.faq-icon{font-size:1.3rem;transition:transform 0.32s;flex-shrink:0;color:var(--primary);}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.42s ease;}
+.faq-a-inner{padding:0 0 22px;font-size:0.95rem;color:var(--text-light);line-height:1.85;}
+
+/* ===== CONTACT ===== */
+#contact{background:linear-gradient(155deg,var(--accent),var(--brown));color:white;}
+#contact .section-title{color:var(--gold-light);}
+#contact .section-subtitle{color:rgba(255,255,255,0.68);}
+.contact-form{max-width:580px;margin:0 auto 44px;display:flex;flex-direction:column;gap:18px;}
+.form-field{display:flex;flex-direction:column;gap:7px;text-align:left;}
+.form-field label{font-size:0.9rem;font-weight:700;color:rgba(255,255,255,0.8);}
+.form-field input,.form-field select,.form-field textarea{padding:13px 18px;border-radius:13px;border:2px solid rgba(255,255,255,0.22);background:rgba(255,255,255,0.1);color:white;font-size:1rem;font-family:'Noto Sans JP',sans-serif;outline:none;transition:border-color 0.22s;}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--gold);}
+.form-field input::placeholder,.form-field textarea::placeholder{color:rgba(255,255,255,0.4);}
+.form-field select option{background:var(--accent);color:white;}
+.form-submit{background:linear-gradient(135deg,var(--primary),var(--gold));color:white;border:none;padding:17px;border-radius:50px;font-size:1.1rem;font-weight:700;cursor:pointer;box-shadow:0 5px 24px rgba(232,117,10,0.42);transition:transform 0.2s;font-family:'Noto Sans JP',sans-serif;}
+.form-submit:hover{transform:translateY(-3px);}
+.share-section{margin-bottom:36px;text-align:center;}
+.share-section p{font-size:1rem;margin-bottom:18px;color:rgba(255,255,255,0.78);}
+.share-btns{display:flex;flex-wrap:wrap;gap:13px;justify-content:center;}
+.share-btn{padding:11px 22px;border-radius:50px;font-size:0.9rem;font-weight:700;cursor:pointer;border:none;transition:transform 0.2s;display:flex;align-items:center;gap:9px;font-family:'Noto Sans JP',sans-serif;}
+.share-btn:hover{transform:translateY(-2px);}
+.share-x{background:#000;color:white;}
+.share-line{background:#06c755;color:white;}
+.share-fb{background:#1877f2;color:white;}
+.qr-badge-area{display:flex;flex-wrap:wrap;gap:26px;justify-content:center;align-items:flex-start;}
+.qr-box,.badge-box{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.22);border-radius:18px;padding:26px;text-align:center;}
+.qr-box p,.badge-box p{font-size:0.86rem;margin-bottom:13px;color:rgba(255,255,255,0.72);}
+#qr-code{display:inline-block;background:white;padding:9px;border-radius:9px;}
+#badge-canvas{border-radius:13px;display:block;margin:0 auto 13px;}
+.modal-dl-btn{background:linear-gradient(135deg,var(--primary),var(--gold));color:white;border:none;padding:11px 22px;border-radius:50px;font-size:0.9rem;font-weight:700;cursor:pointer;font-family:'Noto Sans JP',sans-serif;}
+
+/* ===== BOOK SECTION ===== */
+#book-section{background:var(--primary-pale);}
+.book-card{display:flex;gap:40px;align-items:center;background:white;border-radius:22px;padding:36px;box-shadow:0 8px 36px var(--shadow);}
+@media(max-width:640px){.book-card{flex-direction:column;gap:24px;}}
+.book-cover{width:200px;flex-shrink:0;background:var(--cream);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:60px;box-shadow:4px 4px 20px rgba(0,0,0,0.25);overflow:hidden;}
+.book-info{}
+.book-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--accent);margin-bottom:6px;line-height:1.4;}
+.book-sub{font-size:0.9rem;color:var(--text-light);margin-bottom:16px;}
+.book-desc{font-size:0.95rem;color:var(--text);line-height:1.85;margin-bottom:20px;}
+.book-meta{font-size:0.85rem;color:var(--text-light);}
+.book-meta span{margin-right:16px;}
+.book-btn{display:inline-block;margin-top:20px;background:linear-gradient(135deg,var(--primary),var(--gold));color:white;padding:12px 28px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.9rem;box-shadow:0 4px 16px rgba(232,117,10,0.35);transition:transform 0.2s;}
+.book-btn:hover{transform:translateY(-2px);}
+
+/* ===== FOOTER ===== */
+footer{background:var(--accent);color:rgba(255,255,255,0.8);text-align:center;padding:44px 20px;}
+.footer-name{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold-light);margin-bottom:8px;}
+.footer-tagline{font-size:0.9rem;color:rgba(255,255,255,0.58);margin-bottom:20px;}
+.footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-bottom:10px;}
+.footer-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.9rem;transition:color 0.2s;}
+.footer-links a:hover{color:var(--gold-light);}
+.footer-copy{font-size:0.78rem;opacity:0.45;margin-top:18px;}
+
+/* ===== CONFETTI CANVAS ===== */
+#confetti-canvas{position:fixed;inset:0;pointer-events:none;z-index:3000;}
+
+/* ===== PAYMENT MODAL ===== */
+#pay-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:4000;align-items:center;justify-content:center;padding:16px;}
+#pay-modal.open{display:flex;}
+.pay-modal-box{background:white;border-radius:24px;padding:36px 30px;max-width:460px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:modalPop 0.3s ease;}
+@keyframes modalPop{from{transform:scale(0.9);opacity:0;}to{transform:scale(1);opacity:1;}}
+.pay-modal-close{float:right;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--text-light);line-height:1;margin:-8px -8px 0 0;}
+.pay-modal-title{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--accent);margin-bottom:6px;clear:both;}
+.pay-modal-plan{font-size:0.9rem;color:var(--text-light);margin-bottom:6px;}
+.pay-modal-price{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--primary);font-weight:700;margin-bottom:24px;}
+.pay-methods{display:flex;flex-direction:column;gap:13px;margin-bottom:24px;}
+.pay-method-btn{display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:14px;border:2px solid var(--border);background:white;cursor:pointer;text-align:left;font-family:'Noto Sans JP',sans-serif;transition:border-color 0.2s,transform 0.15s;width:100%;}
+.pay-method-btn:hover{border-color:var(--primary);transform:translateX(4px);}
+.pay-method-btn.stripe{background:linear-gradient(135deg,#635BFF,#4f46e5);border-color:#635BFF;color:white;}
+.pay-method-btn.stripe:hover{border-color:#4f46e5;transform:translateX(4px);}
+.pay-method-icon{font-size:1.8rem;flex-shrink:0;}
+.pay-method-body{}
+.pay-method-name{font-weight:700;font-size:1rem;margin-bottom:3px;}
+.pay-method-desc{font-size:0.8rem;opacity:0.75;}
+.pay-accepted{text-align:center;font-size:0.78rem;color:var(--text-light);}
+.pay-card-icons{display:flex;gap:8px;justify-content:center;margin-top:8px;flex-wrap:wrap;}
+.card-icon-badge{background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:0.75rem;font-weight:700;color:var(--text-light);}
+
+/* ===== SETUP NOTICE ===== */
+.stripe-setup-notice{background:linear-gradient(135deg,#f0f0ff,#e8e8ff);border:2px dashed #635BFF;border-radius:14px;padding:16px 20px;margin-top:12px;font-size:0.82rem;color:#4f46e5;display:none;}
+.stripe-setup-notice.show{display:block;}
+</style>
+</head>
+<body>
+
+<!-- Payment Modal -->
+<div id="pay-modal" onclick="closePayModal(event)">
+  <div class="pay-modal-box">
+    <button class="pay-modal-close" onclick="closePayModal()">✕</button>
+    <div class="pay-modal-title">💳 お申し込み・お支払い</div>
+    <div class="pay-modal-plan" id="pay-modal-plan-name"></div>
+    <div class="pay-modal-price" id="pay-modal-price"></div>
+    <div class="pay-methods">
+      <button class="pay-method-btn stripe" id="pay-stripe-btn" onclick="goStripe()">
+        <span class="pay-method-icon">💳</span>
+        <div class="pay-method-body">
+          <div class="pay-method-name">クレジットカードで今すぐ支払う</div>
+          <div class="pay-method-desc">Stripe 安全決済 — Visa / Mastercard / JCB / AMEX 対応</div>
+        </div>
+      </button>
+      <button class="pay-method-btn" onclick="goInvoice()">
+        <span class="pay-method-icon">🏦</span>
+        <div class="pay-method-body">
+          <div class="pay-method-name" style="color:var(--accent);">銀行振込（請求書払い）</div>
+          <div class="pay-method-desc">法人・個人事業主向け。メールで請求書をお送りします。</div>
+        </div>
+      </button>
+      <button class="pay-method-btn" onclick="goContact()">
+        <span class="pay-method-icon">💬</span>
+        <div class="pay-method-body">
+          <div class="pay-method-name" style="color:var(--accent);">まず話を聞いてみたい</div>
+          <div class="pay-method-desc">Zoomや電話で気軽にご相談。プレッシャーなし！</div>
+        </div>
+      </button>
+    </div>
+    <div class="pay-accepted">
+      安全な決済処理
+      <div class="pay-card-icons">
+        <span class="card-icon-badge">VISA</span>
+        <span class="card-icon-badge">Mastercard</span>
+        <span class="card-icon-badge">JCB</span>
+        <span class="card-icon-badge">AMEX</span>
+        <span class="card-icon-badge">🔒 SSL暗号化</span>
+      </div>
+    </div>
+    <div class="stripe-setup-notice" id="stripe-notice">
+      ⚠️ Stripe決済リンクが未設定です。<br>
+      Stripeダッシュボードで決済リンクを作成し、やまちゃんに教えてください！<br>
+      → 設定されるまでは問い合わせフォームに転送されます。
+    </div>
+  </div>
+</div>
+
+<!-- Custom Cursor -->
+<div id="custom-cursor">🐡</div>
+
+<!-- Confetti Canvas -->
+<canvas id="confetti-canvas"></canvas>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+<div id="scroll-ball">🐡</div>
+
+<!-- Stay Badge -->
+<div id="stay-badge">⭐ 30秒間見てくれてありがとう！</div>
+
+<!-- Cheer Level Bar -->
+<div id="cheer-bar"><div id="cheer-fill" style="width:0%"></div></div>
+<div id="cheer-level-badge">応援レベル: まだまだ</div>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <button id="lightbox-close">✕</button>
+  <div id="lightbox-content"></div>
+</div>
+
+<!-- Navigation -->
+<nav id="main-nav">
+  <a href="#hero" class="nav-logo">山西伸典</a>
+  <ul class="nav-links">
+    <li><a href="#profile">プロフィール</a></li>
+    <li><a href="#business">事業</a></li>
+    <li><a href="#achievements">実績</a></li>
+    <li><a href="#plans">スポンサー</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
+  </ul>
+</nav>
+
+<!-- ① HERO -->
+<section id="hero">
+  <div class="hero-bg-overlay"></div>
+  <span class="bg-fish" style="top:18%;animation-duration:26s;animation-delay:0s;">🐡</span>
+  <span class="bg-fish" style="top:58%;animation-duration:20s;animation-delay:-8s;">🐠</span>
+  <span class="bg-fish" style="top:80%;animation-duration:32s;animation-delay:-15s;">🐟</span>
+
+  <div class="hero-inner">
+    <div class="hero-avatar">
+      <img src="photos/しんすけプロフィール写真.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" alt="山西伸典">
+      <span style="display:none;">🧑‍💼</span>
+    </div>
+
+    <div class="hero-name">山西 伸典</div>
+    <div class="hero-kana">YAMANISHI SHINSUKE</div>
+
+    <div class="hero-typing">
+      <span id="typing-text"></span><span class="typing-cursor">|</span>
+    </div>
+
+    <div class="hero-badges">
+      <span class="badge">🐡 ふぐ老舗問屋 3代目</span>
+      <span class="badge">🤖 AI教育者</span>
+      <span class="badge">📺 YouTube 1,330人</span>
+      <span class="badge">📚 著書出版済み</span>
+      <span class="badge">👨‍👩‍👧‍👦 3児のパパ</span>
+      <span class="badge">🗾 山口県下関市</span>
+      <span class="badge">🏛 地域協働推進委員</span>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#plans" class="btn-primary">🤝 スポンサーになる</a>
+      <a href="#contact" class="btn-outline">📩 お問い合わせ</a>
+    </div>
+
+    <div class="hero-visitor">👁 このページを見た人: <span id="visitor-count">0</span>人</div>
+  </div>
+</section>
+
+<!-- ② PROFILE -->
+<section id="profile">
+  <div class="section-inner">
+    <h2 class="section-title fade-in">Profile</h2>
+    <p class="section-subtitle fade-in">山西伸典という人間</p>
+    <div class="profile-grid fade-in">
+      <div>
+        <div class="profile-photo-wrap">
+          <img src="photos/しんすけプロフィール写真.jpg" onerror="this.style.display='none';" alt="山西伸典プロフィール">
+          🧑‍💼
+        </div>
+      </div>
+      <div>
+        <table class="profile-table">
+          <tr><td>名前</td><td>山西 伸典（やまにし しんすけ）</td></tr>
+          <tr><td>生年月日</td><td>1984年6月23日</td></tr>
+          <tr><td>出身・在住</td><td>山口県下関市</td></tr>
+          <tr><td>家族</td><td>3児のパパ</td></tr>
+          <tr><td>肩書き</td><td>ふぐ老舗問屋3代目 / AI教育者 / 地域コーディネーター / 地域協働推進委員</td></tr>
+          <tr><td>主な事業</td><td>山西水産 / Ystudio Plus / 外国人材育成 / ナイトハブル</td></tr>
+          <tr><td>YouTube</td><td>下関ふぐ屋やまちゃん（登録者1,330人）</td></tr>
+          <tr><td>著書</td><td>「伝統を守り、未来を創る」（関門出版）</td></tr>
+          <tr><td>地域活動</td><td>PTA・消防団・しゃぼん玉ショー・カオスやストリート</td></tr>
+          <tr><td>委員・役職</td><td>地域協働推進委員</td></tr>
+          <tr><td>SNS</td><td>Instagram / Facebook / YouTube / TikTok / note</td></tr>
+          <tr><td>テーマ</td><td>AI × 魚 × 教育 × 地域</td></tr>
+        </table>
+        <div class="motto-box">
+          <div class="motto-label">🌟 座右の銘</div>
+          <div class="motto-text">"伝統を守り、未来を創る"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ③ BUSINESS -->
+<section id="business">
+  <div class="section-inner">
+    <h2 class="section-title fade-in">Business</h2>
+    <p class="section-subtitle fade-in">山西伸典が手がける4つの事業</p>
+    <div class="business-grid">
+      <div class="business-card fade-in">
+        <div class="business-icon">🐡</div>
+        <div class="business-name">山西水産</div>
+        <div class="business-desc">山口県下関市で100年続くふぐ老舗問屋の3代目として経営を担う。「下関ふぐ」の伝統の味と品質を守りながら、EC展開・海外輸出など未来に向けた改革を推進。</div>
+      </div>
+      <div class="business-card fade-in">
+        <div class="business-icon">🎬</div>
+        <div class="business-name">Ystudio Plus（ワイスタジオプラス）</div>
+        <div class="business-desc">EC支援・動画制作・コンテンツマーケティングを手がけるクリエイティブスタジオ。<strong style="color:var(--primary);">AIエージェントを活用して、あなたの事業を支援します！</strong>このページのような本格LPの制作はもちろん、業務自動化・AI導入・集客戦略まで、中小企業のデジタルブランディングをまるごとサポート。</div>
+      </div>
+      <div class="business-card fade-in">
+        <div class="business-icon">🌍</div>
+        <div class="business-name">外国人材育成事業</div>
+        <div class="business-desc">外国人材の受け入れ・育成・定着支援を通じて、地方の人材課題を解決。文化の違いを超えた「共に働く」チームづくりで、下関の産業を未来につなぐ。</div>
+      </div>
+      <div class="business-card fade-in">
+        <div class="business-icon">🎤</div>
+        <div class="business-name">ナイトハブル事業 / カオスやストリート</div>
+        <div class="business-desc">下関の夜を盛り上げるナイトエコノミー事業と、地域最大の音楽フェスティバル「カオスやストリート」を企画・運営。人と人がつながる"場"を創り続ける。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ GALLERY -->
+<section id="gallery">
+  <div class="section-inner">
+    <h2 class="section-title fade-in">Gallery</h2>
+    <p class="section-subtitle fade-in">写真で見る山西伸典の日常（photos/ フォルダに画像を入れると表示されます）</p>
+    <div class="gallery-grid fade-in">
+      <div class="gallery-item" onclick="openLightboxSrc('photos/しんすけプロフィール写真.jpg','山西伸典')">
+        <img src="photos/しんすけプロフィール写真.jpg" alt="山西伸典">
+        🧑‍💼
+        <div class="gallery-overlay">🔍</div>
+      </div>
+      <div class="gallery-item" onclick="openLightboxSrc('photos/やまちゃん自叙伝サムネイル.jpeg','著書')">
+        <img src="photos/やまちゃん自叙伝サムネイル.jpeg" alt="著書">
+        📚
+        <div class="gallery-overlay">🔍</div>
+      </div>
+      <div class="gallery-item" onclick="openLightboxSrc('photos/312153111_1117077019169901_1599728526568674016_n.jpg','活動写真')">
+        <img src="photos/312153111_1117077019169901_1599728526568674016_n.jpg" alt="活動">
+        🎉
+        <div class="gallery-overlay">🔍</div>
+      </div>
+      <div class="gallery-item" onclick="openLightboxSrc('photos/312301478_1203853990160572_8557437574593192124_n.jpg','活動写真')">
+        <img src="photos/312301478_1203853990160572_8557437574593192124_n.jpg" alt="活動">
+        📸
+        <div class="gallery-overlay">🔍</div>
+      </div>
+      <div class="gallery-item" onclick="openLightboxSrc('photos/305835575_1177628616183669_2986488691634052594_n.jpg','活動写真')">
+        <img src="photos/305835575_1177628616183669_2986488691634052594_n.jpg" alt="活動">
+        🌟
+        <div class="gallery-overlay">🔍</div>
+      </div>
+      <div class="gallery-item" onclick="openLightboxSrc('photos/351566586_1193217574675349_1963358559120823276_n.jpg','活動写真')">
+        <img src="photos/351566586_1193217574675349_1963358559120823276_n.jpg" alt="活動">
+        🐡
+        <div class="gallery-overlay">🔍</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="section-inner">
+    <h2 class="section-title fade-in">Achievements</h2>
+    <p class="section-subtitle fade-in">カードをタップして詳細を見る 👆</p>
+    <div class="achieve-grid">
+      <div class="card-3d fade-in" id="card-yt" onclick="flipCard(this,'yt')">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="card-icon">📺</div>
+            <div class="card-title">YouTubeチャンネル</div>
+            <div class="card-num" data-count="1330">0</div>
+            <div class="card-label">登録者数（下関ふぐ屋やまちゃん）</div>
+            <div class="flip-hint">タップして詳細 👆</div>
+          </div>
+          <div class="card-back">
+            <div class="card-icon">🎬</div>
+            <div class="card-title">発信の力</div>
+            <div class="card-back-text">ふぐ業界の裏側・AI活用・地域の魅力を毎週発信。「下関ふぐ屋やまちゃん」チャンネルで1,330人が応援中！全国へ下関を届けています。</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-3d fade-in" id="card-book" onclick="flipCard(this,'book')">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="card-icon">📚</div>
+            <div class="card-title">著書出版</div>
+            <div class="card-num" style="font-size:1.4rem;line-height:1.3;">伝統を守り<br>未来を創る</div>
+            <div class="card-label">関門出版</div>
+            <div class="flip-hint">タップして詳細 👆</div>
+          </div>
+          <div class="card-back">
+            <div class="card-icon">✍️</div>
+            <div class="card-title">言葉で未来を描く</div>
+            <div class="card-back-text">「ふぐ屋の社長、教育者への道」。伝統産業×AI×教育の融合を描いた初著書。Amazon Kindle で全国配信中！</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-3d fade-in" id="card-fest" onclick="flipCard(this,'fest')">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="card-icon">🎤</div>
+            <div class="card-title">カオスやストリート</div>
+            <div class="card-num" style="font-size:2rem;">音楽フェス</div>
+            <div class="card-label">地域活性化イベント</div>
+            <div class="flip-hint">タップして詳細 👆</div>
+          </div>
+          <div class="card-back">
+            <div class="card-icon">🎵</div>
+            <div class="card-title">人と人をつなぐ場</div>
+            <div class="card-back-text">下関の地域活性化を目的とした音楽フェスティバルを企画・運営。「人と人がつながる面白さ」を体現するイベント。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ MINI GAME -->
+<section id="game-section">
+  <div class="section-inner">
+    <h2 class="section-title">🐡 ふぐキャッチゲーム！</h2>
+    <p class="section-subtitle">泳いでくるふぐを10匹捕まえよう！クリア報酬あり 🎉</p>
+    <div id="game-score-display">🐡 0 / 10</div>
+    <div id="game-area">
+      <div id="game-msg" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.45);font-size:0.95rem;">ゲームスタートボタンを押してね！</div>
+    </div>
+    <div id="game-clear-msg">🎉 クリア！やまちゃんありがとう！<br><br>
+      <button onclick="startGame()" style="background:white;color:var(--primary);border:none;padding:10px 24px;border-radius:24px;font-weight:700;cursor:pointer;margin-top:4px;">もう一度！</button>
+    </div>
+    <br>
+    <button id="game-start-btn" onclick="startGame()">🎮 ゲームスタート！</button>
+  </div>
+</section>
+
+<!-- ⑦ BENEFITS -->
+<section id="benefits">
+  <div class="section-inner">
+    <h2 class="section-title fade-in">スポンサー特典</h2>
+    <p class="section-subtitle fade-in">一緒に下関から世界へ！</p>
+    <div class="benefits-grid">
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">📱</div>
+        <div class="benefit-title">SNS・YouTube で紹介</div>
+        <div class="benefit-desc">Instagram・Facebook・YouTube（登録者1,330人）・TikTok・Threads で貴社・貴店をご紹介。SNS総フォロワーへのリーチで認知拡大を実現します。</div>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">🎉</div>
+        <div class="benefit-title">地域イベント協賛</div>
+        <div class="benefit-desc">カオスやストリート等の地域イベントでロゴ掲示・MC紹介。下関の経済圏への参入と、地域住民への好印象を生むブランディングを提供します。</div>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">🤖</div>
+        <div class="benefit-title">AI活用コンサルティング</div>
+        <div class="benefit-desc">AI教育者・山西伸典によるAI導入・DX推進の相談。業務効率化・集客改善・コンテンツ制作の自動化など、実践的なアドバイスを提供します。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑧ PLANS -->
+<section id="plans">
+  <div class="section-inner">
+    <h2 class="section-title fade-in">スポンサープラン</h2>
+    <p class="section-subtitle fade-in">一緒に下関を盛り上げましょう！</p>
+    <div class="plans-grid">
+      <!-- エントリー -->
+      <div class="plan-card plan-entry fade-in">
+        <div class="plan-name">🌿 エントリープラン</div>
+        <div class="plan-price" style="color:var(--primary);">¥10,000</div>
+        <div class="plan-period">年間 / 税別</div>
+        <ul class="plan-features">
+          <li>SNS紹介（年1回）</li>
+          <li>スポンサー名掲載</li>
+          <li>サンクスメッセージ動画</li>
+        </ul>
+        <div class="slot-row">残枠: <span id="slot-entry">15</span> 件</div>
+        <button class="plan-btn" style="background:linear-gradient(135deg,var(--brown),var(--primary));color:white;margin-bottom:8px;" onclick="openPayModal('🌿 エントリープラン','¥10,000 / 年','entry')">💳 今すぐ申し込む</button>
+        <button class="plan-btn" style="background:transparent;color:var(--text-light);border:1px solid var(--border);font-size:0.82rem;padding:8px;" onclick="selectPlan('エントリープラン（¥10,000/年）')">📩 問い合わせる</button>
+      </div>
+      <!-- ライト -->
+      <div class="plan-card plan-lite fade-in">
+        <div class="plan-name">🌱 ライトプラン</div>
+        <div class="plan-price">¥30,000</div>
+        <div class="plan-period">年間 / 税別</div>
+        <ul class="plan-features">
+          <li>SNS紹介（年3回）</li>
+          <li>スポンサー一覧ページ掲載</li>
+          <li>定期活動報告メール</li>
+          <li>サンクスメッセージ動画</li>
+        </ul>
+        <div class="slot-row">残枠: <span id="slot-lite">8</span> 件</div>
+        <button class="plan-btn" style="margin-bottom:8px;" onclick="openPayModal('🌱 ライトプラン','¥30,000 / 年','lite')">💳 今すぐ申し込む</button>
+        <button class="plan-btn" style="background:transparent;color:var(--text-light);border:1px solid var(--border);font-size:0.82rem;padding:8px;" onclick="selectPlan('ライトプラン（¥30,000/年）')">📩 問い合わせる</button>
+      </div>
+      <!-- スタンダード -->
+      <div class="plan-card plan-std fade-in">
+        <div class="plan-badge">⭐ 人気No.1</div>
+        <div class="plan-name">🚀 スタンダードプラン</div>
+        <div class="plan-price">¥100,000</div>
+        <div class="plan-period">年間 / 税別</div>
+        <ul class="plan-features">
+          <li>SNS紹介（月1回・年12回）</li>
+          <li>YouTube動画内でご紹介</li>
+          <li>イベント協賛・ロゴ掲示</li>
+          <li>オンライン面談（年2回）</li>
+          <li>活動報告レポート毎月</li>
+        </ul>
+        <div class="slot-row">残枠: <span id="slot-std">4</span> 件</div>
+        <button class="plan-btn" style="margin-bottom:8px;" onclick="openPayModal('🚀 スタンダードプラン','¥100,000 / 年','std')">💳 今すぐ申し込む</button>
+        <button class="plan-btn" style="background:rgba(255,255,255,0.2);color:white;border:1px solid rgba(255,255,255,0.4);font-size:0.82rem;padding:8px;" onclick="selectPlan('スタンダードプラン（¥100,000/年）')">📩 問い合わせる</button>
+      </div>
+      <!-- プレミアム -->
+      <div class="plan-card plan-pre fade-in">
+        <div class="plan-badge" style="background:var(--gold-light);color:var(--accent);">👑 プレミアム</div>
+        <div class="plan-name">💎 プレミアムプラン</div>
+        <div class="plan-price">¥300,000</div>
+        <div class="plan-period">年間 / 税別</div>
+        <ul class="plan-features">
+          <li>SNS紹介（週1回以上）</li>
+          <li>YouTube専用コラボ動画</li>
+          <li>イベント最上位協賛</li>
+          <li>山西水産 ふぐ仕入れ体験招待</li>
+          <li>AI活用コンサル（月1回）</li>
+          <li>Ystudio Plus 動画制作特別割引</li>
+        </ul>
+        <div class="slot-row">残枠: <span id="slot-pre">2</span> 件</div>
+        <button class="plan-btn" style="margin-bottom:8px;" onclick="openPayModal('💎 プレミアムプラン','¥300,000 / 年','pre')">💳 今すぐ申し込む</button>
+        <button class="plan-btn" style="background:rgba(255,255,255,0.15);color:white;border:1px solid rgba(255,255,255,0.35);font-size:0.82rem;padding:8px;" onclick="selectPlan('プレミアムプラン（¥300,000/年）')">📩 問い合わせる</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑨ BOOK -->
+<section id="book-section">
+  <div class="section-inner">
+    <h2 class="section-title fade-in">著書紹介</h2>
+    <p class="section-subtitle fade-in">ふぐ屋の社長が教育者になるまでの軌跡</p>
+    <div class="book-card fade-in">
+      <div class="book-cover" style="background:none;padding:0;">
+        <img src="photos/やまちゃん自叙伝サムネイル.jpeg" alt="伝統を守り、未来を創る" style="width:100%;height:auto;object-fit:contain;border-radius:10px;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <span style="display:none;font-size:60px;align-items:center;justify-content:center;width:100%;height:100%;">📚</span>
+      </div>
+      <div class="book-info">
+        <div class="book-title">伝統を守り、未来を創る<br>〜ふぐ屋の社長、教育者への道〜</div>
+        <div class="book-sub">伝統と革新が織りなす、新たな生き方</div>
+        <div class="book-desc">
+          山口県下関市のふぐ老舗問屋に生まれ、3代目として家業を継ぎながら、AI教育者・地域コーディネーターとして地域に奔走する山西伸典の自叙伝。<br><br>
+          なぜふぐ屋の社長がAI教育に情熱を注ぐのか。PTAや消防団、音楽フェスに飛び込み、「伝統と革新」を自ら体現する生き様が詰まった一冊。
+        </div>
+        <div class="book-meta">
+          <span>著者: 山西伸典</span>
+          <span>出版: 関門出版</span>
+        </div>
+        <a href="https://www.amazon.co.jp/dp/B0FM7HBTNF" target="_blank" class="book-btn">📖 Amazonで見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑩ CHEER BOARD -->
+<section id="cheer-board">
+  <div class="section-inner">
+    <h2 class="section-title fade-in">応援ボード</h2>
+    <p class="section-subtitle fade-in">やまちゃんへのメッセージをどうぞ！🎉</p>
+    <div class="cheer-input-row">
+      <input type="text" class="cheer-input" id="cheer-input" placeholder="応援メッセージを入力..." maxlength="50">
+      <button class="cheer-submit" onclick="submitCheer()">送る 🎉</button>
+    </div>
+    <div class="cheer-list" id="cheer-list"></div>
+  </div>
+</section>
+
+<!-- ⑪ MESSAGE -->
+<section id="message-section">
+  <div class="section-inner">
+    <div class="message-box fade-in">
+      <h2 class="section-title" style="margin-bottom:36px;">山西伸典より</h2>
+      <p class="message-text">
+        <span class="message-quote-icon">"</span>
+        下関のふぐ屋に生まれた私が、なぜAI教育や地域活動に情熱を注ぐのか。<br><br>
+        それは、<strong>「人と人がつながる面白さ」と「挑戦する勇気」</strong>を次の世代に伝えたいからです。<br><br>
+        ふぐという100年の伝統を守りながら、AIで未来を創る。<br>
+        PTAで、消防団で、しゃぼん玉ショーで、音楽フェスで、地域をつなぐ。<br><br>
+        3人の子どもたちが誇れる「背中」を見せたい——<br>
+        それが、私を動かし続けるエンジンです。<br><br>
+        一緒に、下関から世界を変えましょう。<br>
+        あなたの応援が、次の一歩を生みます。
+        <span class="message-quote-icon" style="display:inline-block;transform:rotate(180deg);">"</span>
+      </p>
+      <div class="message-name">— 山西 伸典</div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑫ FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <h2 class="section-title fade-in">よくある質問</h2>
+    <p class="section-subtitle fade-in">FAQ</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          スポンサーになるとどんなメリットがありますか？
+          <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">SNS紹介（Instagram・Facebook・YouTube等）、地域イベント協賛、活動報告など、プランに応じたリターンをご用意しています。特に山口県下関市周辺での認知向上・地域ブランディングに効果的です。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          法人・個人どちらでも申し込めますか？
+          <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">はい！法人・個人事業主・個人どちらも大歓迎です。銀行振込・請求書払いに対応しています。まずはお気軽にご連絡ください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          山口県外・全国の企業でも大丈夫ですか？
+          <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">もちろんです！全国・海外からのお問い合わせも歓迎しています。Zoomでのオンライン面談に対応していますので、まずはご連絡ください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          まず話だけ聞いてみることはできますか？
+          <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">ぜひ！フォームから「話だけ聞きたい」とお送りいただければ、Zoomや電話で気軽にご説明します。プレッシャーなし、まずは雑談感覚でどうぞ！</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          ふぐや山西水産とのコラボ企画はできますか？
+          <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">プレミアムプランでは山西水産のふぐ仕入れ体験招待が含まれます。また別途、ふぐを使った商品・イベントコラボも柔軟にご相談いただけます！下関の食文化を一緒に広めましょう。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑬ CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <h2 class="section-title fade-in">お問い合わせ</h2>
+    <p class="section-subtitle fade-in">スポンサー申し込み・コラボ・取材・講演依頼など、お気軽にどうぞ！</p>
+
+    <form class="contact-form fade-in" id="contact-form" onsubmit="submitForm(event)">
+      <div class="form-field">
+        <label>お名前 *</label>
+        <input type="text" name="name" placeholder="山田 太郎" required>
+      </div>
+      <div class="form-field">
+        <label>会社・団体名</label>
+        <input type="text" name="company" placeholder="〇〇株式会社">
+      </div>
+      <div class="form-field">
+        <label>メールアドレス *</label>
+        <input type="email" name="email" placeholder="example@mail.com" required>
+      </div>
+      <div class="form-field">
+        <label>お問い合わせ種別</label>
+        <select name="type" id="inquiry-type">
+          <option value="">選択してください</option>
+          <option value="スポンサー申し込み">スポンサー申し込み</option>
+          <option value="コラボ・取材">コラボ・取材</option>
+          <option value="講演・セミナー依頼">講演・セミナー依頼</option>
+          <option value="AI活用相談">AI活用相談</option>
+          <option value="ふぐ・山西水産について">ふぐ・山西水産について</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>メッセージ *</label>
+        <textarea name="message" rows="5" placeholder="ご相談内容をご自由にお書きください" required></textarea>
+      </div>
+      <button type="submit" class="form-submit">📩 送信する</button>
+    </form>
+
+    <div class="share-section fade-in">
+      <p>このページをシェアする</p>
+      <div class="share-btns">
+        <button class="share-btn share-x" onclick="shareX()">𝕏 Xでシェア</button>
+        <button class="share-btn share-line" onclick="shareLine()">💬 LINEでシェア</button>
+        <button class="share-btn share-fb" onclick="shareFb()">f Facebookでシェア</button>
+      </div>
+    </div>
+
+    <div class="qr-badge-area fade-in">
+      <div class="qr-box">
+        <p>📱 QRコードでシェア</p>
+        <div id="qr-code"></div>
+      </div>
+      <div class="badge-box">
+        <p>🏅 応援バッジを作る</p>
+        <canvas id="badge-canvas" width="320" height="160"></canvas>
+        <button class="modal-dl-btn" onclick="downloadBadge()">バッジをダウンロード</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">山西 伸典</div>
+  <div class="footer-tagline">AI × 魚 × 教育 × 地域 — 下関から世界へ</div>
+  <div class="footer-links">
+    <a href="https://www.youtube.com/@shimofugu" target="_blank">📺 YouTube</a>
+    <a href="https://www.instagram.com/shinsukeyamanishi/" target="_blank">📸 Instagram</a>
+    <a href="https://www.facebook.com/yamanishi.shinsuke/" target="_blank">📘 Facebook</a>
+    <a href="https://my.prairie.cards/u/yamanisisinsuke" target="_blank">🪪 Prairie Cards</a>
+    <a href="https://www.amazon.co.jp/dp/B0FM7HBTNF" target="_blank">📚 著書</a>
+    <a href="mailto:yamanishishinsuke19840623@gmail.com">📧 メール</a>
+  </div>
+  <div class="footer-copy">© 2024 山西伸典 All Rights Reserved.</div>
+</footer>
+
+<script>
+// ===== STRIPE PAYMENT LINKS =====
+// ★ Stripeダッシュボードで決済リンクを作成後、ここに貼り付けてください ★
+// https://dashboard.stripe.com/payment-links → 新しいリンクを作成 → URLをコピー
+var STRIPE_LINKS = {
+  entry: 'https://buy.stripe.com/14A5kw9MYcVI0F7fU7ao800', // エントリープラン ¥10,000
+  lite:  'https://buy.stripe.com/8x24gsf7idZMfA1azNao801', // ライトプラン ¥30,000
+  std:   'https://buy.stripe.com/cNibIU8IU7BobjLbDRao802', // スタンダードプラン ¥100,000
+  pre:   'https://buy.stripe.com/5kQ14gf7ig7UafH23hao803', // プレミアムプラン ¥300,000
+};
+
+var _currentPayPlan = {};
+function openPayModal(planName, price, key) {
+  document.getElementById('pay-modal-plan-name').textContent = planName;
+  document.getElementById('pay-modal-price').textContent = price;
+  _currentPayPlan = {name: planName, price: price, key: key};
+  var notice = document.getElementById('stripe-notice');
+  if (!STRIPE_LINKS[key]) {
+    notice.classList.add('show');
+  } else {
+    notice.classList.remove('show');
+  }
+  document.getElementById('pay-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePayModal(e) {
+  if (e && e.target !== document.getElementById('pay-modal')) return;
+  document.getElementById('pay-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') { document.getElementById('pay-modal').classList.remove('open'); document.body.style.overflow=''; }});
+function goStripe() {
+  var link = STRIPE_LINKS[_currentPayPlan.key];
+  if (link) {
+    window.open(link, '_blank');
+  } else {
+    // Stripe未設定の場合はメールで問い合わせ
+    var subject = encodeURIComponent('[決済] ' + _currentPayPlan.name + ' ' + _currentPayPlan.price);
+    var body = encodeURIComponent(_currentPayPlan.name + '（' + _currentPayPlan.price + '）にお申し込みしたいです。\n\nお名前:\n会社名:\n連絡先電話番号:\n');
+    window.location.href = 'mailto:yamanishishinsuke19840623@gmail.com?subject=' + subject + '&body=' + body;
+  }
+  closePayModal();
+}
+function goInvoice() {
+  var subject = encodeURIComponent('[請求書払い] ' + _currentPayPlan.name);
+  var body = encodeURIComponent(_currentPayPlan.name + '（' + _currentPayPlan.price + '）を銀行振込で申し込みたいです。\n\nお名前:\n会社名:\n連絡先:\n');
+  window.location.href = 'mailto:yamanishishinsuke19840623@gmail.com?subject=' + subject + '&body=' + body;
+  closePayModal();
+}
+function goContact() {
+  closePayModal();
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+  var sel = document.getElementById('inquiry-type');
+  sel.value = 'スポンサー申し込み';
+  var msg = document.querySelector('textarea[name="message"]');
+  if (msg && !msg.value) msg.value = _currentPayPlan.name + 'についてまず話を聞いてみたいです。';
+}
+
+// ===== VISITOR COUNTER =====
+(function(){
+  var k='yamanishi_visits';
+  var n=parseInt(localStorage.getItem(k)||'0')+1;
+  localStorage.setItem(k,n);
+  document.getElementById('visitor-count').textContent=n;
+})();
+
+// ===== CUSTOM CURSOR & TRAIL =====
+var cursor=document.getElementById('custom-cursor');
+var lastTrail=0;
+document.addEventListener('mousemove',function(e){
+  cursor.style.left=e.clientX+'px';
+  cursor.style.top=e.clientY+'px';
+  var now=Date.now();
+  if(now-lastTrail>80){
+    lastTrail=now;
+    var t=document.createElement('div');
+    t.className='trail-p';
+    t.textContent=['✨','⭐','🌟','💫'][Math.floor(Math.random()*4)];
+    t.style.left=(e.clientX-8)+'px';
+    t.style.top=(e.clientY-8)+'px';
+    document.body.appendChild(t);
+    setTimeout(function(){t.remove();},800);
+  }
+});
+
+// ===== SCROLL PROGRESS =====
+var progressBar=document.getElementById('scroll-progress');
+var scrollBall=document.getElementById('scroll-ball');
+var cheerFill=document.getElementById('cheer-fill');
+var cheerLevelBadge=document.getElementById('cheer-level-badge');
+var cheerLevels=['まだまだ','見習い','仲間','親友','最高の仲間！🔥'];
+window.addEventListener('scroll',function(){
+  var pct=window.scrollY/(document.body.scrollHeight-window.innerHeight);
+  pct=Math.min(pct,1);
+  var w=(pct*100)+'%';
+  progressBar.style.width=w;
+  scrollBall.style.left=w;
+  cheerFill.style.width=w;
+  var lvl=Math.min(Math.floor(pct*5),4);
+  cheerLevelBadge.textContent='応援レベル: '+cheerLevels[lvl];
+  if(pct>0.1&&lvl!==window._lastLvl){
+    window._lastLvl=lvl;
+    showFloat(lvl===4?'🔥 ありがとう！最高の仲間！':'レベルアップ！ '+cheerLevels[lvl]);
+  }
+  var nav=document.getElementById('main-nav');
+  if(window.scrollY>60){nav.classList.add('scrolled');}else{nav.classList.remove('scrolled');}
+});
+
+// ===== FLOATING MESSAGE =====
+function showFloat(msg){
+  var old=document.querySelector('.floating-msg');
+  if(old)old.remove();
+  var d=document.createElement('div');
+  d.className='floating-msg';
+  d.textContent=msg;
+  document.body.appendChild(d);
+  setTimeout(function(){d.remove();},3100);
+}
+
+// ===== STAY BADGE =====
+var stayBadge=document.getElementById('stay-badge');
+setTimeout(function(){stayBadge.style.opacity='1';},30000);
+setTimeout(function(){stayBadge.textContent='🎖 60秒滞在！本気のファン！';},60000);
+setTimeout(function(){stayBadge.textContent='👑 3分滞在！最高のサポーター！';},180000);
+
+// ===== TYPING ANIMATION =====
+var phrases=['ふぐ老舗問屋 3代目社長','AI教育者 × 地域コーディネーター','伝統を守り、未来を創る','下関から、世界へ！'];
+var pi=0,ci=0,deleting=false;
+var el=document.getElementById('typing-text');
+function typeLoop(){
+  var p=phrases[pi];
+  if(!deleting){
+    el.textContent=p.slice(0,ci+1);
+    ci++;
+    if(ci>=p.length){deleting=true;setTimeout(typeLoop,1800);return;}
+  }else{
+    el.textContent=p.slice(0,ci-1);
+    ci--;
+    if(ci===0){deleting=false;pi=(pi+1)%phrases.length;}
+  }
+  setTimeout(typeLoop,deleting?60:110);
+}
+typeLoop();
+
+// ===== FADE IN =====
+var observer=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('visible');}
+  });
+},{threshold:0.12});
+document.querySelectorAll('.fade-in').forEach(function(el){observer.observe(el);});
+
+// ===== COUNT UP =====
+function countUp(el){
+  var target=parseInt(el.getAttribute('data-count'));
+  var start=0,dur=1400,step=target/dur*16;
+  var timer=setInterval(function(){
+    start=Math.min(start+step,target);
+    el.textContent=Math.floor(start).toLocaleString();
+    if(start>=target)clearInterval(timer);
+  },16);
+}
+new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){countUp(e.target);observer2.unobserve(e.target);}
+  });
+},{threshold:0.5}).observe(document.querySelector('[data-count]'));
+var observer2=new IntersectionObserver(function(){});
+
+// ===== LIGHTBOX =====
+function openLightboxSrc(src,caption){
+  var lb=document.getElementById('lightbox');
+  var content=document.getElementById('lightbox-content');
+  var img=new Image();
+  img.src=src;
+  img.style.cssText='max-width:90vw;max-height:85vh;border-radius:14px;object-fit:contain;';
+  img.onload=function(){content.innerHTML='';content.appendChild(img);if(caption){var p=document.createElement('p');p.textContent=caption;p.style.cssText='color:rgba(255,255,255,0.7);margin-top:10px;font-size:0.9rem;';content.appendChild(p);}};
+  img.onerror=function(){content.innerHTML='<div class="lb-emoji">📸</div>';};
+  lb.classList.add('open');
+}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open');}
+
+// ===== 3D CARD FLIP + HIDDEN ACHIEVEMENT =====
+var flippedCards=new Set();
+function flipCard(el,key){
+  el.classList.toggle('flipped');
+  if(el.classList.contains('flipped')){flippedCards.add(key);}
+  if(flippedCards.size>=3){showToast('🏆 隠し実績解除！やまちゃんマスター！');}
+}
+function showToast(msg){
+  var t=document.createElement('div');
+  t.className='toast';
+  t.textContent=msg;
+  document.body.appendChild(t);
+  setTimeout(function(){t.remove();},3600);
+}
+
+// ===== MINI GAME =====
+var gameScore=0,gameActive=false,gameInterval=null;
+var gameArea=document.getElementById('game-area');
+var scoreDisp=document.getElementById('game-score-display');
+var clearMsg=document.getElementById('game-clear-msg');
+var fuguEmojis=['🐡','🐠','🐟'];
+
+function startGame(){
+  if(gameActive)return;
+  gameScore=0;gameActive=true;clearMsg.style.display='none';
+  var msg=document.getElementById('game-msg');
+  if(msg)msg.style.display='none';
+  scoreDisp.textContent='🐡 0 / 10';
+  document.getElementById('game-start-btn').style.display='none';
+  gameInterval=setInterval(spawnFugu,1200);
+}
+function spawnFugu(){
+  if(!gameActive)return;
+  var f=document.createElement('div');
+  f.className='fugu-target';
+  var isRtl=Math.random()>0.5;
+  if(isRtl)f.classList.add('rtl');
+  var topPct=10+Math.random()*70;
+  var speed=3000+Math.random()*3000;
+  f.textContent=fuguEmojis[Math.floor(Math.random()*fuguEmojis.length)];
+  f.style.top=topPct+'%';
+  f.style.animationDuration=speed+'ms';
+  f.onclick=function(e){
+    e.stopPropagation();
+    if(!gameActive)return;
+    gameScore++;
+    scoreDisp.textContent='🐡 '+gameScore+' / 10';
+    f.style.transform='scale(2)';
+    f.style.opacity='0';
+    f.style.transition='all 0.25s';
+    setTimeout(function(){f.remove();},300);
+    if(gameScore>=10){gameClear();}
+  };
+  gameArea.appendChild(f);
+  setTimeout(function(){if(f.parentNode)f.remove();},speed+200);
+}
+function gameClear(){
+  gameActive=false;
+  clearInterval(gameInterval);
+  gameArea.querySelectorAll('.fugu-target').forEach(function(f){f.remove();});
+  clearMsg.style.display='block';
+  document.getElementById('game-start-btn').style.display='inline-block';
+  fireConfetti();
+  showFloat('🎉 クリアおめでとう！');
+}
+
+// ===== CONFETTI =====
+function fireConfetti(){
+  var canvas=document.getElementById('confetti-canvas');
+  canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+  var ctx=canvas.getContext('2d');
+  var particles=[];
+  var colors=['#E8750A','#D4A017','#F0D580','#5D3E1A','#FAF5ED'];
+  for(var i=0;i<140;i++){
+    particles.push({x:Math.random()*canvas.width,y:Math.random()*-200,w:6+Math.random()*10,h:10+Math.random()*16,color:colors[Math.floor(Math.random()*colors.length)],vy:2+Math.random()*5,vx:(Math.random()-0.5)*4,rot:Math.random()*360,rv:(Math.random()-0.5)*8});
+  }
+  var frames=0;
+  function drawConfetti(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(function(p){
+      p.y+=p.vy;p.x+=p.vx;p.rot+=p.rv;
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot*Math.PI/180);
+      ctx.fillStyle=p.color;ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
+      ctx.restore();
+    });
+    frames++;
+    if(frames<120)requestAnimationFrame(drawConfetti);
+    else ctx.clearRect(0,0,canvas.width,canvas.height);
+  }
+  drawConfetti();
+}
+
+// ===== PLAN SLOT COUNTER =====
+(function(){
+  var slotData={entry:{id:'slot-entry',max:15,key:'slot_entry'},lite:{id:'slot-lite',max:10,key:'slot_lite'},std:{id:'slot-std',max:5,key:'slot_std'},pre:{id:'slot-pre',max:3,key:'slot_pre'}};
+  Object.values(slotData).forEach(function(s){
+    var v=localStorage.getItem(s.key);
+    if(!v){v=s.max;localStorage.setItem(s.key,v);}
+    document.getElementById(s.id).textContent=v;
+  });
+})();
+
+// ===== SELECT PLAN =====
+function selectPlan(planName){
+  var sel=document.getElementById('inquiry-type');
+  sel.value='スポンサー申し込み';
+  var msg=document.querySelector('textarea[name="message"]');
+  if(msg&&!msg.value)msg.value=planName+'に興味があります。詳しく教えてください。';
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+  showFloat('📝 '+planName+'を選択しました！');
+}
+
+// ===== CHEER BOARD =====
+(function(){
+  var saved=JSON.parse(localStorage.getItem('yamanishi_cheers')||'[]');
+  saved.slice(-20).forEach(addCheerItem);
+})();
+function submitCheer(){
+  var inp=document.getElementById('cheer-input');
+  var val=inp.value.trim();
+  if(!val)return;
+  addCheerItem(val);
+  var saved=JSON.parse(localStorage.getItem('yamanishi_cheers')||'[]');
+  saved.push(val);
+  if(saved.length>30)saved=saved.slice(-30);
+  localStorage.setItem('yamanishi_cheers',JSON.stringify(saved));
+  inp.value='';
+  showFloat('🎉 応援メッセージ送信！ありがとう！');
+}
+function addCheerItem(msg){
+  var list=document.getElementById('cheer-list');
+  var div=document.createElement('div');
+  div.className='cheer-item';
+  var icons=['🐡','⭐','🎉','🔥','💪','🌟','👏','🤝'];
+  div.textContent=icons[Math.floor(Math.random()*icons.length)]+' '+msg;
+  list.insertBefore(div,list.firstChild);
+}
+document.getElementById('cheer-input').addEventListener('keydown',function(e){
+  if(e.key==='Enter'){submitCheer();}
+});
+
+// ===== FAQ ACCORDION =====
+function toggleFaq(btn){
+  var item=btn.parentElement;
+  var a=item.querySelector('.faq-a');
+  var isOpen=item.classList.toggle('open');
+  a.style.maxHeight=isOpen?a.scrollHeight+'px':'0';
+}
+
+// ===== SHARE =====
+var pageUrl=encodeURIComponent(location.href);
+var pageTitle=encodeURIComponent('山西伸典 | AI×魚×教育×地域 — 下関から世界へ');
+function shareX(){window.open('https://twitter.com/intent/tweet?text='+pageTitle+'&url='+pageUrl,'_blank');}
+function shareLine(){window.open('https://social-plugins.line.me/lineit/share?url='+pageUrl,'_blank');}
+function shareFb(){window.open('https://www.facebook.com/sharer/sharer.php?u='+pageUrl,'_blank');}
+
+// ===== FORM SUBMIT =====
+function submitForm(e){
+  e.preventDefault();
+  var f=e.target;
+  var name=f.querySelector('[name="name"]').value;
+  var company=f.querySelector('[name="company"]').value;
+  var email=f.querySelector('[name="email"]').value;
+  var type=f.querySelector('[name="type"]').value;
+  var msg=f.querySelector('[name="message"]').value;
+  var body='お名前: '+name+'\n会社名: '+company+'\nメール: '+email+'\n種別: '+type+'\n\nメッセージ:\n'+msg;
+  var mailtoLink='mailto:yamanishishinsuke19840623@gmail.com?cc=yamanishishinsuke19840623@gmail.com&subject='+encodeURIComponent('[スポンサー・お問い合わせ] '+type+'（'+name+'）')+'&body='+encodeURIComponent(body);
+  window.location.href=mailtoLink;
+  var slot=localStorage.getItem('slot_'+f.querySelector('[name="type"]').value.replace(/[^a-z]/g,''));
+  if(slot&&parseInt(slot)>0)localStorage.setItem('slot_'+f.querySelector('[name="type"]').value.replace(/[^a-z]/g,''),parseInt(slot)-1);
+  showFloat('📩 メーラーが開きます！送信してください。');
+}
+
+// ===== QR CODE =====
+window.addEventListener('load',function(){
+  try{
+    new QRCode(document.getElementById('qr-code'),{text:location.href,width:128,height:128,colorDark:'#5D3E1A',colorLight:'#ffffff'});
+  }catch(e){}
+  drawBadge();
+});
+
+// ===== BADGE =====
+function drawBadge(){
+  var canvas=document.getElementById('badge-canvas');
+  var ctx=canvas.getContext('2d');
+  var grd=ctx.createLinearGradient(0,0,320,160);
+  grd.addColorStop(0,'#5D3E1A');
+  grd.addColorStop(1,'#E8750A');
+  ctx.fillStyle=grd;
+  ctx.roundRect(0,0,320,160,20);
+  ctx.fill();
+  ctx.fillStyle='rgba(255,255,255,0.08)';
+  ctx.beginPath();ctx.arc(280,30,60,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='white';
+  ctx.font='bold 22px Noto Sans JP,sans-serif';
+  ctx.fillText('🐡 山西伸典 応援中！',18,46);
+  ctx.font='13px Noto Sans JP,sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.8)';
+  ctx.fillText('AI × 魚 × 教育 × 地域',18,72);
+  ctx.fillText('下関から世界へ',18,94);
+  ctx.fillStyle='rgba(255,255,255,0.25)';
+  ctx.font='bold 11px sans-serif';
+  ctx.fillText('#やまちゃんサポーター  #下関ふぐ',18,130);
+  ctx.strokeStyle='rgba(212,160,23,0.8)';
+  ctx.lineWidth=3;
+  ctx.roundRect(2,2,316,156,19);
+  ctx.stroke();
+}
+function downloadBadge(){
+  var c=document.getElementById('badge-canvas');
+  var dataUrl=c.toDataURL('image/png');
+  var isMobile=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if(isMobile){
+    var existing=document.getElementById('badge-save-img');
+    if(!existing){
+      var img=document.createElement('img');
+      img.id='badge-save-img';img.src=dataUrl;
+      img.style.cssText='width:100%;border-radius:13px;box-shadow:0 4px 20px rgba(0,0,0,0.2);display:block;margin-bottom:13px;';
+      c.parentNode.insertBefore(img,c);
+      c.style.display='none';
+    }
+    var btn=document.querySelector('.modal-dl-btn');
+    btn.innerHTML='👆 画像を長押しして保存';
+    btn.style.background='linear-gradient(135deg,#06c755,#04a347)';
+    btn.onclick=null;
+  }else{
+    var a=document.createElement('a');
+    a.download='yamanishi-supporter-badge.png';
+    a.href=dataUrl;a.click();
+  }
+}
+
+// ===== PARALLAX FISHES =====
+window.addEventListener('scroll',function(){
+  document.querySelectorAll('.bg-fish').forEach(function(f,i){
+    f.style.transform='translateY('+(window.scrollY*(0.04*(i+1)))+'px)';
+  });
+});
+</script>
+</body>
+</html>
