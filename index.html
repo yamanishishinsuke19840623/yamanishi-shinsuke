@@ -98,7 +98,7 @@ section{padding:84px 20px;}
 
 /* ===== PROFILE ===== */
 #profile{background:white;}
-.profile-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:44px;align-items:start;}
+.profile-grid{display:grid;grid-template-columns:1.6fr;gap:44px;align-items:start;}
 @media(max-width:640px){.profile-grid{grid-template-columns:1fr;}}
 .profile-photo-wrap{width:100%;aspect-ratio:3/4;background:linear-gradient(135deg,var(--primary-pale),var(--gold-light));border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:clamp(60px,16vw,110px);box-shadow:0 10px 40px var(--shadow);overflow:hidden;}
 .profile-photo-wrap img{width:100%;height:100%;object-fit:cover;border-radius:18px;}
@@ -114,11 +114,16 @@ section{padding:84px 20px;}
 #business{background:var(--cream);}
 .business-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
 @media(max-width:600px){.business-grid{grid-template-columns:1fr;}}
-.business-card{background:white;border-radius:18px;padding:30px;box-shadow:0 5px 24px var(--shadow);transition:transform 0.25s,box-shadow 0.25s;border-top:4px solid var(--primary);}
+.business-card{background:white;border-radius:18px;padding:30px;box-shadow:0 5px 24px var(--shadow);transition:transform 0.25s,box-shadow 0.25s;border-top:4px solid var(--primary);cursor:pointer;}
 .business-card:hover{transform:translateY(-5px);box-shadow:0 12px 40px var(--shadow);}
 .business-icon{font-size:2.6rem;margin-bottom:14px;}
 .business-name{font-size:1.15rem;font-weight:700;color:var(--accent);margin-bottom:10px;}
 .business-desc{font-size:0.9rem;color:var(--text-light);line-height:1.75;}
+.business-more{max-height:0;overflow:hidden;transition:max-height 0.45s ease,padding 0.3s;font-size:0.88rem;color:var(--text);line-height:1.85;border-top:0px solid var(--border);margin-top:0;}
+.business-card.open .business-more{max-height:300px;padding-top:14px;margin-top:14px;border-top:1px solid var(--border);}
+.business-hint{font-size:0.8rem;color:var(--primary);margin-top:14px;display:flex;align-items:center;gap:5px;font-weight:700;}
+.hint-arrow{display:inline-block;transition:transform 0.35s;}
+.business-card.open .hint-arrow{transform:rotate(180deg);}
 
 /* ===== GALLERY ===== */
 #gallery{background:var(--primary-pale);}
@@ -441,12 +446,6 @@ footer{background:var(--accent);color:rgba(255,255,255,0.8);text-align:center;pa
     <p class="section-subtitle fade-in">山西伸典という人間</p>
     <div class="profile-grid fade-in">
       <div>
-        <div class="profile-photo-wrap">
-          <img src="photos/しんすけプロフィール写真.jpg" onerror="this.style.display='none';" alt="山西伸典プロフィール">
-          🧑‍💼
-        </div>
-      </div>
-      <div>
         <table class="profile-table">
           <tr><td>名前</td><td>山西 伸典（やまにし しんすけ）</td></tr>
           <tr><td>生年月日</td><td>1984年6月23日</td></tr>
@@ -476,25 +475,33 @@ footer{background:var(--accent);color:rgba(255,255,255,0.8);text-align:center;pa
     <h2 class="section-title fade-in">Business</h2>
     <p class="section-subtitle fade-in">山西伸典が手がける4つの事業</p>
     <div class="business-grid">
-      <div class="business-card fade-in">
+      <div class="business-card fade-in" onclick="toggleBusiness(this)">
         <div class="business-icon">🐡</div>
         <div class="business-name">山西水産</div>
         <div class="business-desc">山口県下関市で100年続くふぐ老舗問屋の4代目として経営を担う。「下関ふぐ」の伝統の味と品質を守りながら、EC展開・海外輸出など未来に向けた改革を推進。</div>
+        <div class="business-more">下関が世界に誇る天然とらふぐをはじめ、多彩なふぐ商品を取り扱い。料理店・旅館・ホテルへの業務用卸から、個人向けEC販売まで対応。外国人スタッフとともに、国際競争力のある水産ビジネスへの変革を進めています。ふぐに関するご相談もお気軽に！</div>
+        <div class="business-hint"><span class="hint-arrow">▼</span> 詳しく見る</div>
       </div>
-      <div class="business-card fade-in">
+      <div class="business-card fade-in" onclick="toggleBusiness(this)">
         <div class="business-icon">🎬</div>
         <div class="business-name">Ystudio Plus（ワイスタジオプラス）</div>
-        <div class="business-desc">EC支援・動画制作・コンテンツマーケティングを手がけるクリエイティブスタジオ。<strong style="color:var(--primary);">AIエージェントを活用して、あなたの事業を支援します！</strong>このページのような本格LPの制作はもちろん、業務自動化・AI導入・集客戦略まで、中小企業のデジタルブランディングをまるごとサポート。</div>
+        <div class="business-desc">EC支援・動画制作・コンテンツマーケティングを手がけるクリエイティブスタジオ。<strong style="color:var(--primary);">AIエージェントを活用して、あなたの事業を支援します！</strong></div>
+        <div class="business-more">このLPもYstudio Plusが制作。AIツールを活用した業務自動化・コンテンツ生成・LP制作・SNS運用代行など、デジタル化に悩む中小企業を総合支援します。あなたの会社にも同じクオリティのデジタルマーケティングを。まずはお気軽にご相談ください！</div>
+        <div class="business-hint"><span class="hint-arrow">▼</span> 詳しく見る</div>
       </div>
-      <div class="business-card fade-in">
+      <div class="business-card fade-in" onclick="toggleBusiness(this)">
         <div class="business-icon">🌍</div>
         <div class="business-name">外国人材育成事業</div>
         <div class="business-desc">外国人材の受け入れ・育成・定着支援を通じて、地方の人材課題を解決。文化の違いを超えた「共に働く」チームづくりで、下関の産業を未来につなぐ。</div>
+        <div class="business-more">ベトナム・フィリピン・インドネシアなどからの受け入れ実績あり。入国前研修〜配属後フォローまで一気通貫で対応。日本語教育・生活支援・メンタルケアも含めた「定着率重視」の育成プログラムで、人材不足に悩む企業をサポートします。</div>
+        <div class="business-hint"><span class="hint-arrow">▼</span> 詳しく見る</div>
       </div>
-      <div class="business-card fade-in">
+      <div class="business-card fade-in" onclick="toggleBusiness(this)">
         <div class="business-icon">🎤</div>
         <div class="business-name">ナイトハブル事業 / カオスやストリート</div>
         <div class="business-desc">下関の夜を盛り上げるナイトエコノミー事業と、地域最大の音楽フェスティバル「カオスやストリート」を企画・運営。人と人がつながる"場"を創り続ける。</div>
+        <div class="business-more">カオスやストリートは年1回開催の音楽フェスで、アーティスト招致・ステージ運営・地域連携まで手がける下関の一大イベント。協賛スポンサーも募集中！下関の夜をもっと面白くしたい企業・個人はぜひご連絡ください。</div>
+        <div class="business-hint"><span class="hint-arrow">▼</span> 詳しく見る</div>
       </div>
     </div>
   </div>
@@ -953,6 +960,13 @@ function goContact() {
   sel.value = 'スポンサー申し込み';
   var msg = document.querySelector('textarea[name="message"]');
   if (msg && !msg.value) msg.value = _currentPayPlan.name + 'についてまず話を聞いてみたいです。';
+}
+
+// ===== BUSINESS CARD EXPAND =====
+function toggleBusiness(card){
+  var isOpen = card.classList.toggle('open');
+  var hint = card.querySelector('.business-hint');
+  if(hint) hint.innerHTML = '<span class="hint-arrow">'+(isOpen?'▲':'▼')+'</span> '+(isOpen?'閉じる':'詳しく見る');
 }
 
 // ===== VISITOR COUNTER =====
