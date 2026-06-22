@@ -86,21 +86,12 @@ nav.scrolled{
   background-size:cover;
   background-position:center center;
 }
-#ocean-cv{position:absolute;inset:0;width:100%;height:100%;opacity:.35}
+
 .hero-veil{
   position:absolute;inset:0;
   background:radial-gradient(ellipse at 50% 80%,rgba(13,31,53,.7) 0%,rgba(8,8,14,.88) 65%);
 }
-.fugu-bg{
-  position:absolute;right:6%;bottom:12%;
-  width:38vw;max-width:480px;
-  opacity:.055;
-  animation:fugu-float 9s ease-in-out infinite;
-}
-@keyframes fugu-float{
-  0%,100%{transform:translateY(0) rotate(-2deg)}
-  50%{transform:translateY(-22px) rotate(3deg)}
-}
+
 .hero-cnt{
   position:relative;z-index:2;
   text-align:center;padding:0 2rem;
@@ -711,23 +702,7 @@ footer{
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <canvas id="ocean-cv"></canvas>
   <div class="hero-veil"></div>
-
-  <!-- Fugu SVG silhouette -->
-  <svg class="fugu-bg" viewBox="0 0 500 350" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <ellipse cx="240" cy="185" rx="170" ry="120" fill="var(--cream)"/>
-    <circle cx="240" cy="185" r="168" fill="none" stroke="var(--cream)" stroke-width="1.5" stroke-dasharray="5 10"/>
-    <circle cx="240" cy="185" r="140" fill="none" stroke="var(--cream)" stroke-width=".8" stroke-dasharray="3 12"/>
-    <circle cx="330" cy="158" r="28" fill="var(--black)"/>
-    <circle cx="337" cy="151" r="9" fill="var(--cream)"/>
-    <ellipse cx="400" cy="190" rx="22" ry="13" fill="var(--black)"/>
-    <path d="M240 65 C215 28 175 5 148 38 C175 50 215 62 240 65Z" fill="var(--cream)"/>
-    <path d="M240 305 C215 342 175 360 148 328 C175 315 215 308 240 305Z" fill="var(--cream)"/>
-    <path d="M70 185 C35 173 2 148 8 123 C32 138 60 162 70 185Z" fill="var(--cream)"/>
-    <path d="M70 185 C35 197 2 222 8 247 C32 232 60 208 70 185Z" fill="var(--cream)"/>
-    <ellipse cx="165" cy="165" rx="12" ry="8" fill="rgba(201,161,74,0.6)" transform="rotate(-15)"/>
-  </svg>
 
   <div class="hero-cnt">
     <p class="hero-eyebrow">Shimonoseki, Japan · Est. 1879 · 147 Years of Craftsmanship</p>
@@ -1340,61 +1315,6 @@ document.querySelectorAll('a,button').forEach(el=>{
   el.addEventListener('mouseleave',()=>{cur.style.transform='scale(1)';ring.style.transform='scale(1)';ring.style.borderColor='rgba(201,161,74,.45)'});
 });
 
-/* ── OCEAN CANVAS ── */
-const cv=document.getElementById('ocean-cv');
-const ctx=cv.getContext('2d');
-function resize(){cv.width=window.innerWidth;cv.height=window.innerHeight}
-resize();window.addEventListener('resize',resize);
-
-const pts=Array.from({length:130},()=>({
-  x:Math.random()*window.innerWidth,
-  y:Math.random()*window.innerHeight,
-  r:Math.random()*1.4+.3,
-  s:Math.random()*.38+.08,
-  o:Math.random()*.55+.1,
-  dx:(Math.random()-.5)*.25,
-  ph:Math.random()*Math.PI*2,
-}));
-
-let t=0;
-function draw(){
-  ctx.clearRect(0,0,cv.width,cv.height);
-
-  /* background radial */
-  const g=ctx.createRadialGradient(cv.width/2,cv.height,0,cv.width/2,cv.height/2,cv.height);
-  g.addColorStop(0,'rgba(13,31,53,.75)');
-  g.addColorStop(1,'rgba(8,8,14,0)');
-  ctx.fillStyle=g;ctx.fillRect(0,0,cv.width,cv.height);
-
-  /* wave lines */
-  for(let w=0;w<6;w++){
-    ctx.beginPath();
-    ctx.strokeStyle=`rgba(201,161,74,${.025+w*.007})`;
-    ctx.lineWidth=1;
-    const yb=cv.height*(.55+w*.1);
-    ctx.moveTo(0,yb);
-    for(let x=0;x<=cv.width;x+=4){
-      const y=yb+Math.sin(x*.007+t+w*.6)*(18+w*6)+Math.sin(x*.014+t*1.2)*8;
-      ctx.lineTo(x,y);
-    }
-    ctx.stroke();
-  }
-
-  /* particles */
-  pts.forEach(p=>{
-    p.y-=p.s;
-    p.x+=p.dx+Math.sin(t*.4+p.ph)*.25;
-    if(p.y<-8){p.y=cv.height+8;p.x=Math.random()*cv.width}
-    if(p.x<0)p.x=cv.width;if(p.x>cv.width)p.x=0;
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle=`rgba(201,161,74,${p.o*(0.5+0.5*Math.sin(t+p.ph))})`;
-    ctx.fill();
-  });
-
-  t+=.007;requestAnimationFrame(draw);
-}
-draw();
 
 /* ── NAV SCROLL ── */
 window.addEventListener('scroll',()=>{
