@@ -389,7 +389,7 @@ section{padding:8rem 3rem}
 }
 .act-card:hover::before{height:100%}
 .act-card:hover{background:rgba(13,31,53,.4)}
-.act-icon{font-size:1.8rem;margin-bottom:1rem;opacity:.6}
+.act-icon{width:30px;height:30px;margin-bottom:1rem;display:block;color:var(--gold);opacity:.75}
 .act-cat{font-size:.65rem;letter-spacing:.4em;color:var(--gold);margin-bottom:.5rem}
 .act-ttl{font-family:'Noto Serif JP',serif;font-size:1.2rem;font-weight:700;margin-bottom:.9rem}
 .act-txt{font-size:.82rem;color:var(--cream-dim);line-height:2;font-weight:300}
@@ -418,7 +418,7 @@ section{padding:8rem 3rem}
 }
 .media-card:hover::after{opacity:1}
 .media-card:hover{border-color:rgba(201,161,74,.4)}
-.media-icon{font-size:1.6rem;margin-bottom:.9rem;opacity:.55}
+.media-icon{width:26px;height:26px;margin-bottom:.9rem;display:block;color:var(--gold);opacity:.65}
 .media-type{font-size:.65rem;letter-spacing:.4em;color:var(--gold);margin-bottom:.4rem}
 .media-name{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:700;margin-bottom:.7rem}
 .media-desc{font-size:.8rem;color:var(--cream-dim);line-height:1.85;font-weight:300}
@@ -556,7 +556,7 @@ section{padding:8rem 3rem}
   font-weight:300;color:rgba(201,161,74,.07);line-height:1;
   margin-bottom:.8rem;
 }
-.reason-icon{font-size:1.6rem;margin-bottom:1.2rem;display:block}
+.reason-icon{width:28px;height:28px;margin-bottom:1.2rem;display:block;color:var(--gold)}
 .reason-ttl{
   font-family:'Noto Serif JP',serif;font-size:1.15rem;
   font-weight:700;margin-bottom:.9rem;color:var(--cream);
@@ -1040,7 +1040,7 @@ footer{
     </div>
     <div class="act-grid">
       <div class="act-card rv" style="transition-delay:.08s">
-        <div class="act-icon">🐡</div>
+        <div class="act-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="4" cy="6" r="2"/><circle cx="4" cy="12" r="2"/><circle cx="4" cy="18" r="2"/><circle cx="12" cy="4" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="20" r="2"/><circle cx="20" cy="9" r="2"/><circle cx="20" cy="17" r="2"/><line x1="6" y1="6" x2="10" y2="4"/><line x1="6" y1="6" x2="10" y2="12"/><line x1="6" y1="12" x2="10" y2="4"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="6" y1="12" x2="10" y2="20"/><line x1="6" y1="18" x2="10" y2="12"/><line x1="6" y1="18" x2="10" y2="20"/><line x1="14" y1="4" x2="18" y2="9"/><line x1="14" y1="12" x2="18" y2="9"/><line x1="14" y1="12" x2="18" y2="17"/><line x1="14" y1="20" x2="18" y2="17"/></svg></div>
         <div class="act-cat">INDUSTRY</div>
         <div class="act-ttl">下関ふく次世代ミーティング</div>
         <div class="act-txt">
@@ -1058,7 +1058,7 @@ footer{
         </div>
       </div>
       <div class="act-card rv" style="transition-delay:.18s">
-        <div class="act-icon">⚡</div>
+        <div class="act-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="13,2 7,13 12,13 11,22 17,11 12,11 13,2"/><line x1="2" y1="8" x2="5" y2="8"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="2" y1="16" x2="5" y2="16"/></svg></div>
         <div class="act-cat">LOCAL EVENT</div>
         <div class="act-ttl">カオスやストリート</div>
         <div class="act-txt">
@@ -1076,7 +1076,7 @@ footer{
         </div>
       </div>
       <div class="act-card rv" style="transition-delay:.28s">
-        <div class="act-icon">🏘️</div>
+        <div class="act-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="13" width="6" height="9"/><rect x="9" y="7" width="6" height="15"/><rect x="16" y="10" width="6" height="12"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="9" y1="4" x2="15" y2="4"/></svg></div>
         <div class="act-cat">COMMUNITY</div>
         <div class="act-ttl">安岡地区まちづくり協議会</div>
         <div class="act-txt">
@@ -1084,7 +1084,7 @@ footer{
         </div>
       </div>
       <div class="act-card rv" style="transition-delay:.38s">
-        <div class="act-icon">📣</div>
+        <div class="act-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg></div>
         <div class="act-cat">BRAND</div>
         <div class="act-ttl">ブランドプロデューサー部</div>
         <div class="act-txt">
@@ -1104,44 +1104,44 @@ footer{
     </div>
     <div class="media-grid">
       <a href="https://www.youtube.com/@yamanishisuisan" target="_blank" class="media-card rv" style="transition-delay:.08s">
-        <div class="media-icon">▶</div>
+        <div class="media-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5,3 19,12 5,21"/><line x1="22" y1="6" x2="22" y2="18"/><line x1="19.5" y1="8" x2="19.5" y2="16"/></svg></div>
         <div class="media-type">YOUTUBE</div>
         <div class="media-name">下関ふぐ屋やまちゃん japonais Fugu</div>
         <div class="media-desc">ふぐの捌き方・南風泊市場の初競り・ふぐ処理師実技試験対策まで。「顔が見えるふぐ屋」として産地の今を発信中。</div>
         <div style="margin-top:1rem;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--gold)">1,330<span style="font-size:.65rem;letter-spacing:.25em;margin-left:.3rem;color:var(--cream-dim)">登録者</span></div>
       </a>
       <div class="media-card rv" style="transition-delay:.15s">
-        <div class="media-icon">📺</div>
+        <div class="media-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><polyline points="17,2 12,7 7,2"/><line x1="8" y1="21" x2="16" y2="21"/></svg></div>
         <div class="media-type">TV · 朝日放送（ABC）</div>
         <div class="media-name">朝だ！生です旅サラダ</div>
         <div class="media-desc">人気番組「日本全国コレ！うまかろう！！」コーナーで<strong>山西水産特製ふぐ炊き込みご飯</strong>が紹介されました。</div>
       </div>
       <div class="media-card rv" style="transition-delay:.22s">
-        <div class="media-icon">🎌</div>
+        <div class="media-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
         <div class="media-type">TV · にっぽん旅先ぐるめチャンネル</div>
         <div class="media-name">旅先グルメハンター</div>
         <div class="media-desc">旅先での輝くような瞬間とそこでしか味わえない美味しい瞬間を求めて日本全国へ発信する番組で下関・山西水産が紹介されました。</div>
       </div>
       <div class="media-card rv" style="transition-delay:.29s">
-        <div class="media-icon">⚡</div>
+        <div class="media-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><line x1="6" y1="5.7" x2="9.5" y2="10.5"/><line x1="18" y1="5.7" x2="14.5" y2="10.5"/><line x1="6" y1="18.3" x2="9.5" y2="13.5"/><line x1="18" y1="18.3" x2="14.5" y2="13.5"/></svg></div>
         <div class="media-type">WEB MEDIA · 電通系</div>
         <div class="media-name">ONE STORY</div>
         <div class="media-desc">「高級魚・クエが自宅で気軽に楽しめる本格クエ鍋セット！？」として山西水産のもうひとつの名物・クエ鍋が掲載。ふぐ加工の老舗としての幅広さが評価されました。</div>
       </div>
       <a href="https://www.instagram.com/yamanishisuisan/" target="_blank" class="media-card rv" style="transition-delay:.36s">
-        <div class="media-icon">◎</div>
+        <div class="media-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
         <div class="media-type">INSTAGRAM · 店舗公式</div>
         <div class="media-name">@yamanishisuisan</div>
         <div class="media-desc">毎日の仕入れ・旬の魚・商品情報をビジュアルで発信。下関の海の今を、リアルタイムでお届けしています。</div>
       </a>
       <a href="https://www.instagram.com/fuguya_sensei/" target="_blank" class="media-card rv" style="transition-delay:.43s">
-        <div class="media-icon">◎</div>
+        <div class="media-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="4"/><path d="M2 22c0-4.4 3.6-8 8-8s8 3.6 8 8"/><circle cx="20" cy="5" r="3"/><line x1="20" y1="2" x2="20" y2="1"/><line x1="23" y1="5" x2="24" y2="5"/><line x1="20" y1="8" x2="20" y2="9"/><line x1="17" y1="5" x2="16" y2="5"/></svg></div>
         <div class="media-type">INSTAGRAM · 4代目個人</div>
         <div class="media-name">@fuguya_sensei</div>
         <div class="media-desc">AI × 魚 × 教育 × 地域。4代目やまちゃんの個人アカウント。ふぐ屋の枠を超えた発信・活動の舞台裏を届けています。</div>
       </a>
       <div class="media-card rv" style="transition-delay:.43s">
-        <div class="media-icon">🎬</div>
+        <div class="media-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23,7 16,12 23,17 23,7"/><rect x="1" y="5" width="15" height="14" rx="2"/><line x1="5" y1="9" x2="5" y2="15"/><line x1="9" y1="9" x2="9" y2="15"/></svg></div>
         <div class="media-type">TV · J:COMチャンネル</div>
         <div class="media-name">ご当地人図鑑 第49回</div>
         <div class="media-desc">「下関人図鑑 第49回 山西伸典さん」として出演。下関市安岡生まれ・安岡育ちとして地元への思いと、カオスやストリートの活動をたっぷり語りました。</div>
@@ -1161,18 +1161,18 @@ footer{
     <div class="reasons-grid">
       <div class="reason-card rv" style="transition-delay:.05s">
         <div class="reason-n">01</div>
-        <span class="reason-icon">🐡</span>
+        <span class="reason-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="15" width="4" height="7"/><rect x="9" y="9" width="4" height="13"/><rect x="16" y="3" width="4" height="19"/><line x1="1" y1="22" x2="23" y2="22"/></svg></span>
         <div class="reason-ttl">産地直結で鮮度が違う</div>
         <div class="reason-txt">南風泊市場に直接買付権を持つ数少ない問屋。仲介業者を介さないから、揚がったその日のふぐが最短で届く。市場内でも目利き歴12年以上の4代目自らが毎朝選びます。</div>
       </div>
       <div class="reason-card rv" style="transition-delay:.15s">
-        <span class="reason-icon">🔪</span>
+        <span class="reason-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="7"/><path d="M8.5 16.5l-3 5.5 6.5-2 6.5 2-3-5.5"/><polyline points="9,9 11,11 15,7"/></svg></span>
         <div class="reason-n">02</div>
         <div class="reason-ttl">国家資格を持つ職人が処理</div>
         <div class="reason-txt">ふぐの処理には「ふぐ処理師」の国家資格が必要。自社のふぐ処理施設で有資格の熟練職人が丁寧に処理。コリコリの食感・上品な甘みを損なわず、安全・確実にお届けします。</div>
       </div>
       <div class="reason-card rv" style="transition-delay:.25s">
-        <span class="reason-icon">📦</span>
+        <span class="reason-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
         <div class="reason-n">03</div>
         <div class="reason-ttl">産地の「今」が見える安心感</div>
         <div class="reason-txt">YouTubeで初競り・捌き方・加工現場まで公開。顔の見えるふぐ屋として、何を・どこで・誰が・どう作ったかを正直に発信。1,330人の登録者が見守る透明な産地直送。</div>
@@ -1200,7 +1200,7 @@ footer{
     <span class="gift-tag">法人ギフト</span>
     <span class="gift-tag">のし対応</span>
   </div>
-  <div class="gift-price rv">¥598〜<strong>¥12,498</strong>（税込）</div>
+  <div class="gift-price rv">¥598〜<strong>¥30,000</strong>（税込）</div>
   <div class="hero-btns rv">
     <a href="https://yamanishi.theshop.jp/" target="_blank" class="btn-g"><span>ギフトを選ぶ →</span></a>
     <a href="https://www.rakuten.co.jp/yamanishisuisan/" target="_blank" class="btn-o">楽天市場でみる</a>
@@ -1221,7 +1221,7 @@ footer{
         <div style="font-size:.58rem;letter-spacing:.35em;color:var(--gold);margin-bottom:.5rem;opacity:.8">公式オンラインショップ</div>
         <span class="shop-name">山西水産 公式</span>
         <div class="shop-lbl">BASE ONLINE SHOP</div>
-        <div style="font-size:.72rem;color:var(--cream-dim);margin-top:.6rem">¥598〜¥12,498</div>
+        <div style="font-size:.72rem;color:var(--cream-dim);margin-top:.6rem">¥598〜¥30,000</div>
         <span class="shop-arrow">今すぐ購入する →</span>
       </a>
       <a href="https://www.rakuten.co.jp/yamanishisuisan/" target="_blank" class="shop-card">
