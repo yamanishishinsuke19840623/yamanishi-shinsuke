@@ -29,17 +29,6 @@ body{
   color:var(--cream);
   font-family:'Noto Sans JP',sans-serif;
   overflow-x:hidden;
-  cursor:none;
-}
-
-/* ── CURSOR ── */
-#cur,#cur-ring{position:fixed;pointer-events:none;z-index:9999;border-radius:50%}
-#cur{width:7px;height:7px;background:var(--gold);transition:transform .1s}
-#cur-ring{
-  width:38px;height:38px;
-  border:1px solid rgba(201,161,74,.45);
-  transition:all .15s;
-  transform:translate(-50%,-50%);
 }
 
 /* ── NAV ── */
@@ -273,30 +262,36 @@ section{padding:8rem 3rem}
 }
 
 /* ── PRODUCTS ── */
-.products{background:var(--ocean)}
+.products{background:#f5f0e8}
+.products .sec-label{color:var(--gold)}
+.products .sec-ttl{color:#1a1208}
+.products p{color:#5a4e40}
 .prod-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;flex-wrap:wrap;gap:1rem}
-.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
 .prod-card{
-  position:relative;overflow:hidden;aspect-ratio:3/4;
-  background:rgba(8,8,14,.85);
+  background:#fff;
+  border:1px solid rgba(201,161,74,.2);
+  overflow:hidden;
+  transition:box-shadow .35s,transform .35s;
 }
-.prod-bg{
-  position:absolute;inset:0;
+.prod-card:hover{
+  box-shadow:0 12px 48px rgba(8,8,14,.1);
+  transform:translateY(-4px);
+}
+.prod-photo{
+  width:100%;aspect-ratio:4/3;
   background-size:cover;background-position:center;
-  transition:transform .9s cubic-bezier(.16,1,.3,1);
+  transition:transform .8s cubic-bezier(.16,1,.3,1);
 }
-.prod-card:hover .prod-bg{transform:scale(1.08)}
-.prod-ov{
-  position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(8,8,14,.97) 28%,rgba(8,8,14,.15) 100%);
-  display:flex;flex-direction:column;justify-content:flex-end;padding:1.8rem;
-}
-.prod-tag{font-size:.62rem;letter-spacing:.4em;color:var(--gold);margin-bottom:.4rem}
-.prod-name{font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:700;margin-bottom:.4rem}
-.prod-desc{font-size:.78rem;color:var(--cream-dim);line-height:1.8;font-weight:300}
+.prod-card:hover .prod-photo{transform:scale(1.06)}
+.prod-body{padding:1.3rem 1.5rem 1.7rem}
+.prod-tag{font-size:.6rem;letter-spacing:.4em;color:var(--gold);margin-bottom:.45rem;opacity:.85}
+.prod-name{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:700;color:#1a1208;margin-bottom:.4rem;line-height:1.6}
+.prod-desc{font-size:.76rem;color:#6a5c4e;line-height:1.9;font-weight:300}
 .prod-price{
-  font-family:'Cormorant Garamond',serif;font-size:1.1rem;
-  color:var(--gold);margin-top:.5rem;letter-spacing:.05em;
+  font-family:'Cormorant Garamond',serif;font-size:1.2rem;
+  color:var(--gold);margin-top:.85rem;letter-spacing:.05em;
+  border-top:1px solid rgba(201,161,74,.22);padding-top:.8rem;
 }
 
 /* ── OWNER ── */
@@ -660,8 +655,6 @@ footer{
 <body>
 
 <div class="noise"></div>
-<div id="cur"></div>
-<div id="cur-ring"></div>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobile-menu">
@@ -899,12 +892,12 @@ footer{
         <div class="sec-label">Lineup</div>
         <h2 class="sec-ttl">本場の味を、<br>あなたの食卓へ。</h2>
       </div>
-      <a href="https://www.rakuten.co.jp/yamanishisuisan/" target="_blank" class="btn-o">すべての商品を見る →</a>
+      <a href="https://www.rakuten.co.jp/yamanishisuisan/" target="_blank" class="btn-g"><span>すべての商品を見る →</span></a>
     </div>
     <div class="prod-grid">
       <div class="prod-card rv" style="transition-delay:.08s">
-        <div class="prod-bg" style="background-image:url('photos/prod-sashimi.jpg');background-size:cover;background-position:center top"></div>
-        <div class="prod-ov">
+        <div class="prod-photo" style="background-image:url('photos/prod-sashimi.jpg');background-position:center top"></div>
+        <div class="prod-body">
           <div class="prod-tag">PREMIUM · とらふぐ</div>
           <div class="prod-name">とらふぐ刺身（薄造り）</div>
           <div class="prod-desc">職人の技が光る薄造り。透き通るような美しさと、コリコリした食感。ふぐの真髄。</div>
@@ -912,8 +905,8 @@ footer{
         </div>
       </div>
       <div class="prod-card rv" style="transition-delay:.13s">
-        <div class="prod-bg" style="background-image:url('photos/prod-shabu.jpg');background-size:cover;background-position:center"></div>
-        <div class="prod-ov">
+        <div class="prod-photo" style="background-image:url('photos/prod-shabu.jpg');background-position:center"></div>
+        <div class="prod-body">
           <div class="prod-tag">SIGNATURE · しゃぶ鍋</div>
           <div class="prod-name">てっちりしゃぶ鍋セット</div>
           <div class="prod-desc">コラーゲン豊富な出汁と、ぷりぷりの身。2〜3人前。冬の食卓に欠かせない本場の一品。</div>
@@ -921,8 +914,8 @@ footer{
         </div>
       </div>
       <div class="prod-card rv" style="transition-delay:.18s">
-        <div class="prod-bg" style="background-image:url('photos/hero.jpg');background-size:cover;background-position:center"></div>
-        <div class="prod-ov">
+        <div class="prod-photo" style="background-image:url('photos/hero.jpg');background-position:center"></div>
+        <div class="prod-body">
           <div class="prod-tag">GIFT · 刺身＆鍋＆ご飯</div>
           <div class="prod-name">とらふぐ刺身・鍋・ご飯セット</div>
           <div class="prod-desc">刺身・鍋・炊き込みご飯の素が揃う豪華セット。2〜3人前。贈り物にも最適。</div>
@@ -930,8 +923,8 @@ footer{
         </div>
       </div>
       <div class="prod-card rv" style="transition-delay:.23s">
-        <div class="prod-bg" style="background-image:url('photos/bg-grill.jpg');background-size:cover;background-position:center"></div>
-        <div class="prod-ov">
+        <div class="prod-photo" style="background-image:url('photos/bg-grill.jpg');background-position:center"></div>
+        <div class="prod-body">
           <div class="prod-tag">COOKING · バター焼き</div>
           <div class="prod-name">真ふぐ刺身・一汐干しセット</div>
           <div class="prod-desc">下関直送。旨みが凝縮した一汐干しと、新鮮な刺身が揃う2人前セット。</div>
@@ -939,8 +932,8 @@ footer{
         </div>
       </div>
       <div class="prod-card rv" style="transition-delay:.28s">
-        <div class="prod-bg" style="background-image:url('photos/bg-charcoal.jpg');background-size:cover;background-position:center"></div>
-        <div class="prod-ov">
+        <div class="prod-photo" style="background-image:url('photos/bg-charcoal.jpg');background-position:center"></div>
+        <div class="prod-body">
           <div class="prod-tag">炭火 · 一夜干し</div>
           <div class="prod-name">焼きひれ（10〜12枚入）</div>
           <div class="prod-desc">炭火で丁寧に焼き上げたふぐのひれ。お酒と一緒に。ひれ酒にも最適な逸品。</div>
@@ -948,8 +941,8 @@ footer{
         </div>
       </div>
       <div class="prod-card rv" style="transition-delay:.33s">
-        <div class="prod-bg" style="background-image:url('photos/prod-gift.jpg');background-size:cover;background-position:center top"></div>
-        <div class="prod-ov">
+        <div class="prod-photo" style="background-image:url('photos/prod-gift.jpg');background-position:center top"></div>
+        <div class="prod-body">
           <div class="prod-tag">GIFT · 詰め合わせ</div>
           <div class="prod-name">ふぐ一夜干しセット（箱入り）</div>
           <div class="prod-desc">下関老舗問屋の贈り物。一夜干し・たたき・ポン酢が揃う、化粧箱入り贈答品。</div>
@@ -1298,24 +1291,6 @@ footer{
 </footer>
 
 <script>
-/* ── CURSOR ── */
-const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{
-  mx=e.clientX;my=e.clientY;
-  cur.style.left=mx-3.5+'px';cur.style.top=my-3.5+'px';
-});
-(function anim(){
-  rx+=(mx-rx-19)*.12;ry+=(my-ry-19)*.12;
-  ring.style.left=rx+'px';ring.style.top=ry+'px';
-  requestAnimationFrame(anim);
-})();
-document.querySelectorAll('a,button').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.style.transform='scale(3)';ring.style.transform='scale(1.4)';ring.style.borderColor='rgba(201,161,74,.8)'});
-  el.addEventListener('mouseleave',()=>{cur.style.transform='scale(1)';ring.style.transform='scale(1)';ring.style.borderColor='rgba(201,161,74,.45)'});
-});
-
-
 /* ── NAV SCROLL ── */
 window.addEventListener('scroll',()=>{
   document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);
